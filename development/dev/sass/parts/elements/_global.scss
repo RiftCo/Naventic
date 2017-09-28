@@ -4,11 +4,11 @@
 @import '../_framework/variables/font';
 
 // Mixins
+@import '../_framework/mixins/gradients';
 @import '../_framework/mixins/animation';
 
 // global
 .animate{transition: all .3s $transition-easeInOutQuad;}
-
 
 
 // Layour
@@ -40,7 +40,8 @@
 }
 .overlay{
 	@extend .cover;
-	//@include gradient(black, red, rgb(120,0,0));
+	@include overlay;
+	@include easeOutCirc(.6s);
 	z-index: 5;
 }
 .bg-image{

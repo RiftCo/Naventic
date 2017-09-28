@@ -1,10 +1,18 @@
-$brand: 							#f79d20;
+$brand: 							#ac9860;
 $brand-light: 				desaturate(lighten($brand, 12),18);
-$brand-dark: 					saturate(darken($brand, 12),18);
+$brand-dark: 					#7c673b;
+
+$Shade4: #e9ebf0;
+$Shade3: #909399;
+$Shade2: #43474d;
+$Shade1: #15191f;
 
 $link-colour-before: 	darken($brand, 8);
-$link-colour-after: 	$brand-dark;
+$link-colour-after: 	$brand;
 
-$text-colour: 				white;
-$text-colour-invert:  black;
-$background: 					rgb(10,10,10);
+$text-colour-strong: 	$Shade4;
+$text-colour: 				$Shade3;
+$text-colour-invert:  $Shade2;
+$background: 					$Shade1;
+
+$border: $Shade2;
