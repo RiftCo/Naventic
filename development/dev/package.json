@@ -1,7 +1,7 @@
 {
-  "name": "Quickstart",
+  "name": "Naventic",
   "version": "0.1.0",
-  "description": "The starting point for all my projects",
+  "description": "eSports Organization",
   "main": "/gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1",
@@ -28,13 +28,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OllieJT/quickstart.git"
+    "url": "git+https://github.com/RiftCo/Naventic.git"
   },
   "keywords": [],
   "author": "Ollie Taylor",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OllieJT/quickstart/issues"
+    "url": "https://github.com/RiftCo/Naventic/issues"
   },
-  "homepage": "https://github.com/OllieJT/quickstart#readme"
+  "homepage": "https://github.com/RiftCo/Naventic#readme"
 }
