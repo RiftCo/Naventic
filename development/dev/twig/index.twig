@@ -14,4 +14,57 @@
 	<h1>{{ title }}</h1>
 </header>
 
+<section class="demo">
+
+	<!-- News Cards -->
+	<div class="row">
+		<div class="col c6">
+			{% include './includes/cards/_news.twig' %}
+		</div>
+		<div class="col c6">
+			{% include './includes/cards/_news.twig' %}
+		</div>
+	</div>
+
+	<!-- Player Cards -->
+	<div class="row">
+		<div class="col c4">
+			{% include './includes/cards/_player.twig' %}
+		</div>
+		<div class="col c4">
+			{% include './includes/cards/_player.twig' %}
+		</div>
+		<div class="col c4">
+			{% include './includes/cards/_player.twig' %}
+		</div>
+	</div>
+
+	<!-- Livestream Cards -->
+	<div class="row">
+		<div class="col c4">
+			{% include './includes/cards/_livestream.twig' %}
+		</div>
+		<div class="col c4">
+			{% include './includes/cards/_livestream.twig' %}
+		</div>
+		<div class="col c4">
+			{% include './includes/cards/_livestream.twig' %}
+		</div>
+	</div>
+
+	<!-- Store Cards -->
+	<div class="row">
+		<div class="col c4">
+			{% include './includes/cards/_store.twig' %}
+		</div>
+		<div class="col c4">
+			{% include './includes/cards/_store.twig' %}
+		</div>
+		<div class="col c4">
+			{% include './includes/cards/_store.twig' %}
+		</div>
+	</div>
+
+</section>
+
 {% endblock %}
