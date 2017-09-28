@@ -59,14 +59,16 @@
 	.title{margin-top: $unit}
 	.title,li{
 		@include easeOutCirc(.3s);
-		transition-delay: .1s;
+		transition-delay: .2s;
 	}
+	.bg-image{filter: blur(2px)}
 	&:hover{
 		.overlay{opacity: .3}
 		.title,li{
 			transform: translateY($unit * 5);
 			opacity: 0;
 		}
+		.bg-image{filter: blur(0)}
 	}
 }
 

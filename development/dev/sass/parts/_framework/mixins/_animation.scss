@@ -12,5 +12,5 @@ $transition-easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
 
 @mixin easeOutCirc($duration) {
-	transition: all $duration $transition-easeOutCirc;
+	transition: all $duration $transition-easeOutCirc, filter .1s ease-in-out;
 }

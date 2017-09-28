@@ -33,8 +33,10 @@
   background: rgba(21, 25, 31, 0.7);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(21, 25, 31, 0.94)), to(rgba(21, 25, 31, 0.7)));
   background: linear-gradient(to top, rgba(21, 25, 31, 0.94) 0%, rgba(21, 25, 31, 0.7) 100%);
-  -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
   z-index: 5;
 }
 
@@ -61,8 +63,10 @@
   position: relative;
   border: 1px solid #43474d;
   overflow: hidden;
-  -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
 }
 
 .card .details {
@@ -86,14 +90,18 @@
   position: relative;
   display: block;
   border-bottom: 1px solid #43474d;
-  -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
   overflow: hidden;
 }
 
 .card .bg-image {
-  -webkit-transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+  transition: all 1.8s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
 }
 
 .card:hover {
@@ -141,10 +149,17 @@
 }
 
 .card-news .title, .card-news li {
-  -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
+  -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.card-news .bg-image {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 
 .card-news:hover .overlay {
@@ -155,6 +170,11 @@
   -webkit-transform: translateY(3rem);
           transform: translateY(3rem);
   opacity: 0;
+}
+
+.card-news:hover .bg-image {
+  -webkit-filter: blur(0);
+          filter: blur(0);
 }
 
 .card-player .card-container, .card-store .card-container {
@@ -224,16 +244,20 @@
 }
 
 .card-player .avatar-container.avi-default .avatar img, .card-player .thumb.avi-default .avatar img, .card-store .avatar-container.avi-default .avatar img, .card-store .thumb.avi-default .avatar img {
-  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
   max-width: 100%;
   height: auto;
   border-radius: 100%;
 }
 
 .card-player .avatar-container.avi-photo img, .card-player .avatar-container.product-photo img, .card-player .thumb.avi-photo img, .card-player .thumb.product-photo img, .card-store .avatar-container.avi-photo img, .card-store .avatar-container.product-photo img, .card-store .thumb.avi-photo img, .card-store .thumb.product-photo img {
-  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
   width: 100%;
   height: auto;
   position: absolute;
