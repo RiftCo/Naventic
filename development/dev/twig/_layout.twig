@@ -1,0 +1,32 @@
+{# Template for ALL pages #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include 'includes/template/_head.twig' %}
+	
+	
+	
+	<!-- imports -->
+	<link rel="stylesheet" type="text/css" href="{{ siteUrl }}/style.css" media="bogus">
+	
+	<style>
+		{% spaceless %}
+		{% include 'includes/template/inline.css' %}
+		{% endspaceless %}
+	</style>
+	
+	
+</head>
+<body {% if pageID is defined %}class="{{ pageID }}{% endif %}">
+{% block content %}{% endblock %}
+	
+	
+	
+	<!-- imports -->
+	<!--<script src="." type="text/javascript" async ></script>-->
+	<link rel="stylesheet" type="text/css" href="{{ siteUrl }}/style.css">
+
+
+
+</body>
+</html>
