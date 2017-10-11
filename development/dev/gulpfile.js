@@ -270,7 +270,7 @@ gulps.registerTasks({
 		setTimeout(function () {
 
 			// Source
-			gulp.src(path.image.src)
+			gulp.src(file.image)
 				// Copy Location	
 				.pipe(gulp.dest(path.image.build))
 				
@@ -291,7 +291,7 @@ gulps.registerTasks({
 		setTimeout(function () {
 
 			// Source
-			gulp.src(path.script.src)
+			gulp.src(file.script)
 			
 			.pipe(uglify())	
 			
@@ -446,7 +446,8 @@ gulps.registerSeries('serve',
 		"scripts",
 		// Localhost
 		"connect",
-		"watch"
+		"watch",
+		"updated"
 
 	], function () {
 		console.log(util.colors.green.bold('DEV MODE: ') + util.colors.white.bold('ENABLED') + util.colors.red.bold(' Watching...'))
@@ -489,16 +490,6 @@ gulps.registerSeries('publish',
 	], function () {
 		console.log(util.colors.green.bold('PUBLISH: ') + util.colors.white.bold('COMPLETED') + util.colors.red.bold('Watching...'))
 	});
-
-
-
-
-	
-	
-	
-	
-// Generates all development files
-gulps.registerSeries("sass",["clean","sass","inlineSass"], function () {});
 	
 	
 
