@@ -8,7 +8,29 @@
 
 // Home
 
-
+#homepageHeader{
+	display: flex;
+	flex-direction: row;
+	min-height: 540px;
+	.header-left,.header-right,.header-right-top,.header-right-bottom{
+		display: flex;
+		font-size: 0;
+		line-height: 0;
+		margin: 0;
+	}
+	.header-left,.header-right{
+		width: 50%;
+		flex-direction: column;
+	}
+	.header-left{}
+	.header-right{}
+	.header-right-top,.header-right-bottom{
+		flex-grow: 1;
+		height: 50%;
+	}
+	.header-right-top{}
+	.header-right-bottom{}
+}
 
 
 

@@ -10,7 +10,20 @@
 
 {% block content %}
 
-
+<header id="homepageHeader">
+	<div class="header-left">
+		{% include './includes/cards/_news.twig' %}
+	</div>
+	<div class="header-right">
+		<div class="header-right-top">
+			{% include './includes/cards/_team-slider.twig' %}
+		</div>
+		<div class="header-right-bottom">
+			{% include './includes/cards/_page-store.twig' %}
+			{% include './includes/cards/_page.twig' %}
+		</div>
+	</div>
+</header>
 
 <section class="demo">
 

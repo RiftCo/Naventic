@@ -627,3 +627,52 @@ blockquote {
 blockquote strong {
   color: #ac9860;
 }
+
+nav {
+  width: 100vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .logo {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 3rem;
+}
+
+nav .menu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  text-align: right;
+}
+
+nav li, nav .nav-item {
+  height: 100%;
+}
+
+nav .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+nav .nav-item:hover {
+  color: white;
+}
+
+nav .nav-item.active {
+  color: #ac9860;
+}
