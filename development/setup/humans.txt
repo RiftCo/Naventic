@@ -1,8 +1,9 @@
 /* TEAM */
-	Designer & Developer: Ollie Taylor
-	Contact: contact [at] olliejt.com
-	Twitter: @TheOllieJT
-	From: Windsor, England, UK
+	Design & Frontend: Ollie Taylor
+	Backend: Tom Wade
+	Contact: digitalrift.co
+	Twitter: @RiftCo
+	From: England, UK
 
 /* THANKS */
 
@@ -11,7 +12,7 @@
 
 
 /* SITE */
-	Last update: 03 Mar 2017
+	Last update: October 2017
 	Language: English
 	Doctype: HTML5
-	IDE: SketchApp, Atom, Chrome Dev Tools, Cyberduck, Github
+	IDE: SketchApp, VS Code, Chrome Dev Tools, Cyberduck, Github, Wordpress
