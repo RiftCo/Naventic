@@ -7,27 +7,8 @@
 @import '../_framework/mixins/animation';
 
 // Home
-.newsPage,.articlePage,.mediaPage{
-	header::after{
-		@include cover;
-		@include backgroundImage;
-		background-image: url('./img/article/thumbs/thumb-6.jpg');
-		opacity: .18;
-		content: "";
-		filter: blur(6px);
-	}
-}
 
-.newsHeader,.articleHeader{
-	padding-top: $unit * 20;
-	padding-bottom: $unit * 20;
-	span{
-		display: inline-block !important;
-		color: $brand;
-	}
-}
-
-.newsFilter{
+.newsFilter,.teamNav{
 	position: relative;
 	z-index: 15;
 	display: flex;
@@ -54,7 +35,7 @@
 		}
 	}
 }
-.newsFilterGame{
+.newsFilterGame,.teamNav{
 	a{
 		@include easeOutCirc(.3s);
 		padding: $unit * 8 $unit * 5;
@@ -112,6 +93,7 @@ aside{
 	flex-direction: column;
 	li{width: 100%;}
 }
+
 
 
 @media only screen and (max-width: $maxbody) {}

@@ -335,6 +335,36 @@
 	}
 }
 
+.card-page-team{
+	border-width: 0px;
+	margin-top: -.3rem;
+	position: relative;
+	z-index: 2;
+	overflow: visible;
+	.teamNav{
+		position: relative;
+		z-index: 10;
+		justify-content: flex-end;
+		a{
+			&:hover,&.active{
+				border-top-color: $brand;
+				border-bottom-color: transparent;
+			}
+		}
+	}
+	.bg-image{
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-origin: border-box;
+		transform-origin: center bottom;
+	}
+	.details{
+		padding: $unit * 10;
+	}
+	h6{color: $brand}
+}
+
 @media only screen and (max-width: $maxbody) {}
 @media only screen and (max-width: $minbody) {}
 @media only screen and (max-width: $tablet) {}

@@ -14,75 +14,41 @@
 
 {% block content %}
 
+
+
 <header id="top">
 	{% include './includes/template/_navigation.twig' %}
-	<div class="homepageHeader">
-		<div class="header-left">
-			{% include './includes/cards/_news.twig' %}
-		</div>
-		<div class="header-right">
-			<div class="header-right-top">
-				{% include './includes/cards/_team-slider.twig' %}
-			</div>
-			<div class="header-right-bottom">
-				{% include './includes/cards/_page-store.twig' %}
-				{% include './includes/cards/_page.twig' %}
-			</div>
-		</div>
-	</div>
-	{% include './includes/template/_sponsors.twig' %}
+	
+	{% include './includes/cards/_page-team.twig' %}
+	
+	{#<!--{% include './includes/template/_sponsors.twig' %}-->#}
+	
 </header>
 
-<section class="demo">
+<section class="wideNews">
+	<div class="col c3">{% include './includes/cards/_news.twig' %}</div>
+	<div class="col c3">{% include './includes/cards/_news.twig' %}</div>
+	<div class="col c3">{% include './includes/cards/_news.twig' %}</div>
+	<div class="col c3">{% include './includes/cards/_news.twig' %}</div>
+</section>
 
-	<!-- News Cards -->
-	<div class="row">
-		<div class="col c6">
-			{% include './includes/cards/_news.twig' %}
-		</div>
-		<div class="col c6">
-			{% include './includes/cards/_news.twig' %}
-		</div>
-	</div>
+<section class="row">
 
-	<!-- Player Cards -->
-	<div class="row">
-		<div class="col c4">
+		<div class="col c4 hasAvi">
 			{% include './includes/cards/_player.twig' %}
 		</div>
-		<div class="col c4">
+		<div class="col c4 noAvi">
 			{% include './includes/cards/_player.twig' %}
 		</div>
-		<div class="col c4">
+		<div class="col c4 hasAvi">
 			{% include './includes/cards/_player.twig' %}
 		</div>
-	</div>
-
-	<!-- Livestream Cards -->
-	<div class="row">
-		<div class="col c4">
-			{% include './includes/cards/_livestream.twig' %}
+		<div class="col c4 noAvi">
+			{% include './includes/cards/_player.twig' %}
 		</div>
-		<div class="col c4">
-			{% include './includes/cards/_livestream.twig' %}
+		<div class="col c4 noAvi">
+			{% include './includes/cards/_player.twig' %}
 		</div>
-		<div class="col c4">
-			{% include './includes/cards/_livestream.twig' %}
-		</div>
-	</div>
-
-	<!-- Store Cards -->
-	<div class="row">
-		<div class="col c4">
-			{% include './includes/cards/_store.twig' %}
-		</div>
-		<div class="col c4">
-			{% include './includes/cards/_store.twig' %}
-		</div>
-		<div class="col c4">
-			{% include './includes/cards/_store.twig' %}
-		</div>
-	</div>
 
 </section>
 

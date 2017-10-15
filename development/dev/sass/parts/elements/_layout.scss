@@ -149,6 +149,13 @@ footer{
 	padding-bottom: $unit * 20;
 }
 
+.newsPage,.articlePage,.mediaPage,.storePage,.teamPage{
+	header{
+		margin-bottom: -$unit * 5;
+	}
+}
+
+
 @media only screen and (min-width: $maxbody) {}
 @media only screen and (max-width: $minbody) {}
 @media only screen and (max-width: $tablet) {}
