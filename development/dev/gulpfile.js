@@ -175,13 +175,10 @@ gulps.registerTasks({
 				// Export
 				.pipe(gulp.dest(path.inlineStyle.build))
 
-				// Reload	
-				.pipe(connect.reload(
-					console.log(util.colors.bgGreen.black.bold('\nFinished Inline SASS\n')))
-				)
 
-
-			done();
+			done(
+				(console.log(util.colors.bgGreen.black.bold('\nFinished Inline SASS\n')))
+			);
 		},
 			2000);
 
@@ -199,7 +196,7 @@ gulps.registerTasks({
 				"indent_with_tabs": true,
 				"preserve_newlines": false,
 				"max_preserve_newlines": 3,
-				"jslint_happy": true,
+				"jslint_happy": false,
 				"space_after_anon_function": false,
 				"brace_style": "collapse",
 				"keep_array_indentation": false,
@@ -210,7 +207,7 @@ gulps.registerTasks({
 				"unescape_strings": false,
 				"wrap_line_length": 0,
 				"wrap_attributes": "auto",
-				"wrap_attributes_indent_size": 2,
+				"wrap_attributes_indent_size": 3,
 				"end_with_newline": false
 			};
 			
@@ -320,7 +317,7 @@ gulps.registerTasks({
 
 			// Watch Locations
 			gulp.watch(file.style, ["sass"])
-			gulp.watch(file.inlineSass, ["inlineSass"])
+			gulp.watch(file.inlineSass, ["inlineSass","twig"])
 			gulp.watch(file.markupAll, ["twig"])
 			gulp.watch(file.image, ["images"])
 			gulp.watch(file.script, ["scripts"])
