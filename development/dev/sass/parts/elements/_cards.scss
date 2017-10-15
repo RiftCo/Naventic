@@ -103,6 +103,9 @@
 		h6{color:transparentize($text-colour-strong,.3)}
 		span{color: $text-colour-strong}
 	}
+	h6{
+		color: $brand
+	}
 
 	.avatar-container,.thumb{
 		min-height: $unit * 50;

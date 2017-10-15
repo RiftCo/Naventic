@@ -48,8 +48,28 @@
   width: 100%;
   height: 100%; }
 
+/* line 56, sass/parts/elements/_global.scss */
+.pagination {
+  margin-top: 1.8rem;
+  width: 100%;
+  text-align: center; }
+  /* line 60, sass/parts/elements/_global.scss */
+  .pagination li {
+    display: inline-block;
+    margin: 1.8rem;
+    opacity: .6; }
+    /* line 64, sass/parts/elements/_global.scss */
+    .pagination li a {
+      color: #909399 !important; }
+    /* line 67, sass/parts/elements/_global.scss */
+    .pagination li:hover, .pagination li.active {
+      opacity: 1; }
+    /* line 71, sass/parts/elements/_global.scss */
+    .pagination li.active a {
+      color: #ac9860 !important; }
+
 @media only screen and (max-width: 860px) {
-  /* line 61, sass/parts/elements/_global.scss */
+  /* line 83, sass/parts/elements/_global.scss */
   .content-center {
     max-width: 100%;
     margin-left: 1.8rem;
@@ -206,6 +226,39 @@ footer {
       /* line 118, sass/parts/elements/_layout.scss */
       footer .credit a:hover {
         color: #ac9860; }
+
+/* line 128, sass/parts/elements/_layout.scss */
+.newsPage header::after, .articlePage header::after, .mediaPage header::after, .storePage header::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  background-image: url("./img/article/thumbs/thumb-6.jpg");
+  opacity: .18;
+  content: "";
+  -webkit-filter: blur(6px);
+          filter: blur(6px); }
+
+/* line 137, sass/parts/elements/_layout.scss */
+.newsPage header h6, .articlePage header h6, .mediaPage header h6, .storePage header h6 {
+  color: rgba(255, 255, 255, 0.6); }
+
+/* line 140, sass/parts/elements/_layout.scss */
+.newsPage header span, .articlePage header span, .mediaPage header span, .storePage header span {
+  display: inline-block !important;
+  color: #ac9860; }
+
+/* line 147, sass/parts/elements/_layout.scss */
+.newsHeader, .articleHeader {
+  padding-top: 12rem;
+  padding-bottom: 12rem; }
 
 /* line 11, sass/parts/elements/_cards.scss */
 .card {
@@ -365,7 +418,11 @@ footer {
   .card-player .metadata span, .card-store .metadata span {
     color: #e9ebf0; }
 
-/* line 107, sass/parts/elements/_cards.scss */
+/* line 106, sass/parts/elements/_cards.scss */
+.card-player h6, .card-store h6 {
+  color: #ac9860; }
+
+/* line 110, sass/parts/elements/_cards.scss */
 .card-player .avatar-container, .card-player .thumb, .card-store .avatar-container, .card-store .thumb {
   min-height: 30rem;
   -webkit-box-flex: 1;
@@ -373,17 +430,17 @@ footer {
           flex-grow: 1;
   width: 100%;
   min-width: 100%; }
-  /* line 112, sass/parts/elements/_cards.scss */
+  /* line 115, sass/parts/elements/_cards.scss */
   .card-player .avatar-container .bg-image, .card-player .thumb .bg-image, .card-store .avatar-container .bg-image, .card-store .thumb .bg-image {
     opacity: .18; }
-  /* line 113, sass/parts/elements/_cards.scss */
+  /* line 116, sass/parts/elements/_cards.scss */
   .card-player .avatar-container.avi-default, .card-player .thumb.avi-default, .card-store .avatar-container.avi-default, .card-store .thumb.avi-default {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    /* line 116, sass/parts/elements/_cards.scss */
+    /* line 119, sass/parts/elements/_cards.scss */
     .card-player .avatar-container.avi-default .avatar, .card-player .thumb.avi-default .avatar, .card-store .avatar-container.avi-default .avatar, .card-store .thumb.avi-default .avatar {
       position: relative;
       z-index: 20;
@@ -395,7 +452,7 @@ footer {
       -ms-flex-item-align: center;
           align-self: center;
       margin: auto; }
-    /* line 127, sass/parts/elements/_cards.scss */
+    /* line 130, sass/parts/elements/_cards.scss */
     .card-player .avatar-container.avi-default img, .card-player .thumb.avi-default img, .card-store .avatar-container.avi-default img, .card-store .thumb.avi-default img {
       -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
       transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
@@ -406,7 +463,7 @@ footer {
       border-radius: 100%;
       -webkit-transform: scale(0.88);
               transform: scale(0.88); }
-  /* line 136, sass/parts/elements/_cards.scss */
+  /* line 139, sass/parts/elements/_cards.scss */
   .card-player .avatar-container.avi-photo img, .card-player .avatar-container.product-photo img, .card-player .thumb.avi-photo img, .card-player .thumb.product-photo img, .card-store .avatar-container.avi-photo img, .card-store .avatar-container.product-photo img, .card-store .thumb.avi-photo img, .card-store .thumb.product-photo img {
     -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
@@ -419,48 +476,48 @@ footer {
     right: 0;
     top: 3rem; }
 
-/* line 147, sass/parts/elements/_cards.scss */
+/* line 150, sass/parts/elements/_cards.scss */
 .card-player .thumb, .card-store .thumb {
   min-height: 18rem; }
 
-/* line 152, sass/parts/elements/_cards.scss */
+/* line 155, sass/parts/elements/_cards.scss */
 .card-player:hover .avi-photo img, .card-player:hover .product-photo img, .card-store:hover .avi-photo img, .card-store:hover .product-photo img {
   -webkit-transform: translateY(-3rem);
           transform: translateY(-3rem); }
 
-/* line 155, sass/parts/elements/_cards.scss */
+/* line 158, sass/parts/elements/_cards.scss */
 .card-player:hover .avi-default img, .card-store:hover .avi-default img {
   -webkit-transform: scale(1);
           transform: scale(1); }
 
-/* line 161, sass/parts/elements/_cards.scss */
+/* line 164, sass/parts/elements/_cards.scss */
 .hasAvi .avi-default {
   display: none !important; }
 
-/* line 164, sass/parts/elements/_cards.scss */
+/* line 167, sass/parts/elements/_cards.scss */
 .hasAvi .avi-photo {
   display: block !important; }
 
-/* line 169, sass/parts/elements/_cards.scss */
+/* line 172, sass/parts/elements/_cards.scss */
 .noAvi .avi-default {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
 
-/* line 172, sass/parts/elements/_cards.scss */
+/* line 175, sass/parts/elements/_cards.scss */
 .noAvi .avi-photo {
   display: none !important; }
 
-/* line 179, sass/parts/elements/_cards.scss */
+/* line 182, sass/parts/elements/_cards.scss */
 .card-livestream .card-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-/* line 182, sass/parts/elements/_cards.scss */
+/* line 185, sass/parts/elements/_cards.scss */
 .card-livestream .thumb {
   padding-bottom: 56.25%;
   width: 100%; }
-  /* line 185, sass/parts/elements/_cards.scss */
+  /* line 188, sass/parts/elements/_cards.scss */
   .card-livestream .thumb .live, .card-livestream .thumb .offline {
     position: absolute;
     z-index: 20;
@@ -468,32 +525,32 @@ footer {
     right: 1.8rem;
     color: white;
     padding: 0.6rem; }
-    /* line 192, sass/parts/elements/_cards.scss */
+    /* line 195, sass/parts/elements/_cards.scss */
     .card-livestream .thumb .live h6, .card-livestream .thumb .offline h6 {
       line-height: 1em; }
-  /* line 194, sass/parts/elements/_cards.scss */
+  /* line 197, sass/parts/elements/_cards.scss */
   .card-livestream .thumb .live {
     background-color: #7c673b; }
 
-/* line 200, sass/parts/elements/_cards.scss */
+/* line 203, sass/parts/elements/_cards.scss */
 .card-page .bg-image {
   -webkit-filter: blur(6px);
           filter: blur(6px);
   -webkit-transform: scale(1.2);
           transform: scale(1.2); }
 
-/* line 204, sass/parts/elements/_cards.scss */
+/* line 207, sass/parts/elements/_cards.scss */
 .card-page .details, .card-page .card-page-overimg {
   -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
   transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
   transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
   transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out; }
 
-/* line 205, sass/parts/elements/_cards.scss */
+/* line 208, sass/parts/elements/_cards.scss */
 .card-page .details {
   text-align: center; }
 
-/* line 208, sass/parts/elements/_cards.scss */
+/* line 211, sass/parts/elements/_cards.scss */
 .card-page .card-page-overimg {
   width: 100%;
   height: auto;
@@ -504,27 +561,27 @@ footer {
   z-index: 9;
   opacity: .3; }
 
-/* line 218, sass/parts/elements/_cards.scss */
+/* line 221, sass/parts/elements/_cards.scss */
 .card-page h6 {
   color: #ac9860; }
 
-/* line 221, sass/parts/elements/_cards.scss */
+/* line 224, sass/parts/elements/_cards.scss */
 .card-page.card-page-store:hover .details {
   -webkit-transform: translateY(-4.8rem);
           transform: translateY(-4.8rem);
   opacity: .3; }
 
-/* line 225, sass/parts/elements/_cards.scss */
+/* line 228, sass/parts/elements/_cards.scss */
 .card-page.card-page-store:hover .card-page-overimg {
   -webkit-transform: translateY(-3rem);
           transform: translateY(-3rem);
   opacity: 1; }
 
-/* line 237, sass/parts/elements/_cards.scss */
+/* line 240, sass/parts/elements/_cards.scss */
 .c12 .card-news .details {
   margin-top: 40%; }
 
-/* line 245, sass/parts/elements/_cards.scss */
+/* line 248, sass/parts/elements/_cards.scss */
 .relatedContent .card-container, .recommendedContent .card-container {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -538,29 +595,29 @@ footer {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch; }
-  /* line 250, sass/parts/elements/_cards.scss */
+  /* line 253, sass/parts/elements/_cards.scss */
   .relatedContent .card-container li, .recommendedContent .card-container li {
     display: inline-block;
     width: auto; }
 
-/* line 255, sass/parts/elements/_cards.scss */
+/* line 258, sass/parts/elements/_cards.scss */
 .relatedContent .avatar-container, .relatedContent .details, .recommendedContent .avatar-container, .recommendedContent .details {
   min-width: auto;
   padding: 0;
   min-height: 100%; }
 
-/* line 260, sass/parts/elements/_cards.scss */
+/* line 263, sass/parts/elements/_cards.scss */
 .relatedContent .avatar-container, .recommendedContent .avatar-container {
   width: 33.33%;
   float: left;
   border-width: 0px; }
-  /* line 265, sass/parts/elements/_cards.scss */
+  /* line 268, sass/parts/elements/_cards.scss */
   .relatedContent .avatar-container .bg-image, .recommendedContent .avatar-container .bg-image {
     display: none; }
-  /* line 267, sass/parts/elements/_cards.scss */
+  /* line 270, sass/parts/elements/_cards.scss */
   .relatedContent .avatar-container.avi-photo img, .recommendedContent .avatar-container.avi-photo img {
     top: -0.6rem; }
-  /* line 272, sass/parts/elements/_cards.scss */
+  /* line 275, sass/parts/elements/_cards.scss */
   .relatedContent .avatar-container.avi-default .avatar, .recommendedContent .avatar-container.avi-default .avatar {
     overflow: visible;
     display: -webkit-box;
@@ -576,55 +633,55 @@ footer {
     height: auto;
     background-color: transparent; }
 
-/* line 283, sass/parts/elements/_cards.scss */
+/* line 286, sass/parts/elements/_cards.scss */
 .relatedContent .thumb, .recommendedContent .thumb {
   border-width: 0px; }
 
-/* line 285, sass/parts/elements/_cards.scss */
+/* line 288, sass/parts/elements/_cards.scss */
 .relatedContent .card-player .metadata, .recommendedContent .card-player .metadata {
   display: none; }
 
-/* line 286, sass/parts/elements/_cards.scss */
+/* line 289, sass/parts/elements/_cards.scss */
 .relatedContent .card-player .details, .recommendedContent .card-player .details {
   width: 66.66%;
   float: right;
   padding: 1.2rem 0.6rem; }
 
-/* line 293, sass/parts/elements/_cards.scss */
+/* line 296, sass/parts/elements/_cards.scss */
 .relatedContent .card-news .details, .recommendedContent .card-news .details {
   padding: 1.8rem;
   margin-top: 0; }
-  /* line 296, sass/parts/elements/_cards.scss */
+  /* line 299, sass/parts/elements/_cards.scss */
   .relatedContent .card-news .details .date, .recommendedContent .card-news .details .date {
     display: none; }
 
-/* line 300, sass/parts/elements/_cards.scss */
+/* line 303, sass/parts/elements/_cards.scss */
 .relatedContent .card-store .card-container, .recommendedContent .card-store .card-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
 
-/* line 303, sass/parts/elements/_cards.scss */
+/* line 306, sass/parts/elements/_cards.scss */
 .relatedContent .card-store .product-photo, .recommendedContent .card-store .product-photo {
   height: 100%;
   width: 100%; }
-  /* line 306, sass/parts/elements/_cards.scss */
+  /* line 309, sass/parts/elements/_cards.scss */
   .relatedContent .card-store .product-photo img, .recommendedContent .card-store .product-photo img {
     opacity: .3; }
 
-/* line 308, sass/parts/elements/_cards.scss */
+/* line 311, sass/parts/elements/_cards.scss */
 .relatedContent .card-store .details, .recommendedContent .card-store .details {
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 100%;
   text-align: center; }
 
-/* line 316, sass/parts/elements/_cards.scss */
+/* line 319, sass/parts/elements/_cards.scss */
 .relatedContent .card-store:hover .product-photo img, .recommendedContent .card-store:hover .product-photo img {
   opacity: 1; }
 
-/* line 324, sass/parts/elements/_cards.scss */
+/* line 327, sass/parts/elements/_cards.scss */
 .relatedContent .card-store .product-photo, .recommendedContent .card-store .product-photo {
   display: block;
   position: absolute;
@@ -635,7 +692,7 @@ footer {
   width: 100%;
   height: 100%; }
 
-/* line 329, sass/parts/elements/_cards.scss */
+/* line 332, sass/parts/elements/_cards.scss */
 .relatedContent h3, .recommendedContent h3 {
   font-size: 1.8rem;
   line-height: 3rem; }
@@ -1025,76 +1082,5 @@ aside {
 /* line 56, sass/parts/pages/media.scss */
 .videoChat {
   padding-bottom: 88%; }
-
-/* line 10, sass/parts/pages/store.scss */
-.homepageHeader {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  /* line 14, sass/parts/pages/store.scss */
-  .homepageHeader .header-left, .homepageHeader .header-right {
-    width: 50%; }
-  /* line 17, sass/parts/pages/store.scss */
-  .homepageHeader .header-left {
-    min-height: 600px; }
-  /* line 21, sass/parts/pages/store.scss */
-  .homepageHeader .header-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  /* line 25, sass/parts/pages/store.scss */
-  .homepageHeader .header-right-top, .homepageHeader .header-right-bottom {
-    display: block;
-    width: 100%;
-    height: 50%; }
-  /* line 30, sass/parts/pages/store.scss */
-  .homepageHeader .header-right-top {
-    position: relative; }
-  /* line 33, sass/parts/pages/store.scss */
-  .homepageHeader .header-right-bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    /* line 35, sass/parts/pages/store.scss */
-    .homepageHeader .header-right-bottom .card {
-      width: 50%;
-      height: 100%; }
-
-@media only screen and (max-width: 1200px) {
-  /* line 46, sass/parts/pages/store.scss */
-  .homepageHeader {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    /* line 48, sass/parts/pages/store.scss */
-    .homepageHeader .header-left, .homepageHeader .header-right {
-      width: 100%; }
-    /* line 49, sass/parts/pages/store.scss */
-    .homepageHeader .header-left {
-      min-height: 500px; }
-    /* line 50, sass/parts/pages/store.scss */
-    .homepageHeader .header-right {
-      min-height: 50vw; } }
-
-@media only screen and (max-width: 860px) {
-  /* line 57, sass/parts/pages/store.scss */
-  .homepageHeader .header-left {
-    min-height: 300px; }
-  /* line 58, sass/parts/pages/store.scss */
-  .homepageHeader .header-right {
-    min-height: 75vw; }
-  /* line 59, sass/parts/pages/store.scss */
-  .homepageHeader .header-right-bottom {
-    min-height: 35vw; } }
-
-@media only screen and (max-width: 540px) {
-  /* line 64, sass/parts/pages/store.scss */
-  .homepageHeader .header-right {
-    min-height: 100vw; }
-  /* line 65, sass/parts/pages/store.scss */
-  .homepageHeader .header-left, .homepageHeader .header-right-bottom {
-    min-height: 50vw; } }
 
 /*# sourceMappingURL=style.css.map */

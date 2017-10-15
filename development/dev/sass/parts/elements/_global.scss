@@ -53,6 +53,28 @@
 	height: 100%;
 }
 
+.pagination{
+	margin-top: $unit * 3;
+	width: 100%;
+	text-align: center;
+	li{
+		display: inline-block;
+		margin: $unit * 3;
+		opacity: .6;
+		a{
+			color: $text-colour !important;
+		}
+		&:hover,&.active{
+			opacity: 1;
+		}
+		&.active{
+			a{
+				color: $brand !important;
+			}
+		}
+	}
+}
+
 
 
 @media only screen and (max-width: $maxbody) {}
