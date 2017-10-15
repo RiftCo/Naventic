@@ -1,0 +1,56 @@
+{# index.twig #}
+{% extends "_layout.twig" %}
+
+	{# Page Data #}
+	{% set page = "news" %}
+	{% set pageID = "articlePage" %}
+
+	{# Metadata #}
+	{% set title = "Website Title" %}
+	{% set subTitle = "Page Title" %}
+	{% set date = "April 12th 2020" %}
+	{% set description = "Description" %}
+	{% set thumbnail = "img/thumbnail.jpg" %}
+
+{% block content %}
+
+<header id="top">
+	{% include './includes/template/_navigation.twig' %}
+	<div class="articleHeader row">
+		<div class="title">
+			<h6><span>CSGO Event</span> 3 Days Ago</h6>
+			<h1>Naventic bring home the win at ESL New York 2017</h1>
+		</div>
+	</div>
+</header>
+
+<section class="row articleBody">
+	<article class="col c8">
+		<img src="./img/article/thumbs/thumb-17.jpg" alt="Article Title" width="606" height="340.7" />
+		<p>
+			If you fucking give up, you will achieve nothing. Remember it’s called the creative process, it’s not the creative fucking moment. Never let your guard down by thinking you’re fucking good enough. The graphic designer’s first fucking consideration is always the size and shape of the format, whether for the printed page or for digital display. When you sit down to work, external critics aren’t the enemy. It’s you who you must to fight against to do great fucking work. You must overcome yourself. Form follows fucking function.
+		</p>
+		<p>
+			A good fucking composition is the result of a hierarchy consisting of clearly contrasting elements set with distinct alignments containing irregular intervals of negative space. Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design, because that is what it lives with. The new becomes threatening, the old reassuring.” Think about all the fucking possibilities. Someday is not a fucking day of the week. Fuck. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect and accept the fucking possibility of failure.
+		</p>
+		<p>
+			When you design, you have to draw on your own fucking life experiences. If it’s not something you would want to read/look at/use then why fucking bother? Your rapidograph pens are fucking dried up, the x-acto blades in your bag are rusty, and your mind is dull. Stop clicking your mouse, get messy, go back to the basics and make something fucking original. Form follows fucking function. Respect your fucking craft.
+		</p>
+		<p>
+			Respect your fucking craft. Intuition is fucking important. Must-do is a good fucking master. Don’t fucking lie to yourself.
+		</p>
+	</article>
+	<aside class="col c4">
+		<ul class="relatedContent">
+			<li class="hasAvi">{% include './includes/cards/_player.twig' %}</li>
+			<li class="noAvi">{% include './includes/cards/_player.twig' %}</li>
+			<li>{% include './includes/cards/_store.twig' %}</li>
+		</ul>
+		<ul class="recommendedContent">
+			<li class="recommendedContentTitle"><h6>Recommended:</h6></li>
+			<li>{% include './includes/cards/_news.twig' %}</li>
+		</ul>
+	</aside>
+</section>
+
+{% endblock %}

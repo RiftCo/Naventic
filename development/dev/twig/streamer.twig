@@ -1,0 +1,43 @@
+{# index.twig #}
+{% extends "_layout.twig" %}
+
+	{# Page Data #}
+	{% set page = "news" %}
+	{% set pageID = "articlePage" %}
+
+	{# Metadata #}
+	{% set title = "Website Title" %}
+	{% set subTitle = "Page Title" %}
+	{% set date = "April 12th 2020" %}
+	{% set description = "Description" %}
+	{% set thumbnail = "img/thumbnail.jpg" %}
+
+{% block content %}
+
+<header id="top">
+	{% include './includes/template/_navigation.twig' %}
+	<div class="articleHeader row">
+		<div class="title">
+			<h6><span>Twitch Livestream</span></h6>
+			<h1>RyaNoob</h1>
+		</div>
+	</div>
+</header>
+
+<section class="row articleBody">
+	<article class="col c8 twitchStream">
+	<div class="video">
+		<iframe src="https://player.twitch.tv/?channel=mistercash4gold" frameborder="0" allowfullscreen="true" scrolling="no" height="540" width="960"></iframe>
+	</div>
+	<div class="videoChat">
+		<iframe src="https://www.twitch.tv/mistercash4gold/chat?popout=" frameborder="0" scrolling="no" height="500" width="350"></iframe>
+	</div>
+		
+		
+	</article>
+	<aside class="col c4 hasAvi">
+		{% include './includes/cards/_player.twig' %}
+	</aside>
+</section>
+
+{% endblock %}

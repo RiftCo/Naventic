@@ -1,0 +1,58 @@
+// Variables
+@import '../_framework/variables/layout';
+@import '../_framework/variables/colour';
+@import '../_framework/variables/font.scss';
+
+// Mixins
+@import '../_framework/mixins/animation';
+
+.mediaFilter{
+	margin: 1.8rem 0;
+	position: relative;
+	z-index: 15;
+	display: flex;
+	flex-wrap: wrap;
+	li,a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	li{
+		//flex-grow: 1;
+		flex-shrink: 0;
+	}
+	a{
+		@include easeOutCirc(.3s);
+		width: 100%;
+		height: 100%;
+		position: relative;
+		border-style: solid;
+		padding: $unit * 3 $unit * 5;
+		border-width: 1px 1px 1px 1px;
+		border-color: transparent;
+		img{
+			@include easeOutCirc(.6s);
+			opacity: .6;
+			transform: scale(.94);
+		}
+		&:hover,&.active{
+			border-color: $brand;
+			p{
+				color: $brand
+			}
+		}
+	}
+}
+
+
+.video,.videoChat{
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	iframe{
+		@include cover;
+	}
+}
+.videoChat{
+	padding-bottom: 88%;
+}

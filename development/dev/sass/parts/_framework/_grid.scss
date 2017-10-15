@@ -4,29 +4,27 @@
 @import 'variables/font';
 
 
-
 .row {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	width: $minbody;
+	width: 100%;
 	max-width: $minbody;
 	box-sizing: border-box;
 	margin: 0 auto;
+	padding: 0 $unit * 1.5;
 	&::before{display: none}
 	&::after{display: none}
 }
 .col {
 	padding-left: $unit * 1.5;
 	padding-right: $unit * 1.5;
+	padding-bottom: $unit * 3;
 	box-sizing: border-box;
+	max-width: 100%;
 	header,section,footer,div,span{display: block;}
-	&:first-child {
-		margin-left: -$unit * 1.5
-	}
-	&:last-child {
-		margin-right: -$unit * 1.5
-	}
+	//&:first-child {margin-left: -$unit * 1.5}
+	//&:last-child {margin-right: -$unit * 1.5}
 	&.c1 {
 		flex-grow: 1;
 		flex-shrink: 11;
@@ -89,6 +87,19 @@
 	}
 }
 
-@media only screen and (max-width: $maxbody) {}
-@media only screen and (max-width: $tablet) {}
+@media only screen and (max-width: $maxbody) {
+	.row{
+		//padding: 0 $unit * 3;
+		flex-wrap: wrap;
+	}
+}
+@media only screen and (max-width: $tablet) {
+	.row,.col{display: block;}
+	//.col{
+	//	&:first-child,&:last-child {
+	//		margin-right: 0;
+	//		margin-left: 0;
+	//	}
+	//}
+}
 @media only screen and (max-width: $mobile) {}

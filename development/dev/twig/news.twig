@@ -1,0 +1,74 @@
+{# index.twig #}
+{% extends "_layout.twig" %}
+
+	{# Page Data #}
+	{% set page = "news" %}
+	{% set pageID = "newsPage" %}
+
+	{# Metadata #}
+	{% set title = "Website Title" %}
+	{% set subTitle = "Page Title" %}
+	{% set date = "April 12th 2020" %}
+	{% set description = "Description" %}
+	{% set thumbnail = "img/thumbnail.jpg" %}
+
+{% block content %}
+
+<header id="top">
+	{% include './includes/template/_navigation.twig' %}
+	<div class="newsHeader row">
+		<div class="title">
+			<h6>Latest updates from Naventic</h6>
+			<h1>Naventic <span>Rocket League</span> News</h1>
+		</div>
+	</div>
+	<ul class="newsFilter newsFilterType row">
+		<li><a href="." class="active">
+			<p>Event</p>
+		</a></li>
+		<li><a href="." class="active">
+			<p>Video</p>
+		</a></li>
+		<li><a href=".">
+			<p>League</p>
+		</a></li>
+	</ul>
+	<ul class="newsFilter newsFilterGame row">
+		<li><a href="." class="active">
+			<img src="./img/team/csgo.svg" alt="CSGO" width="70" height="30" />
+		</a></li>
+		<li><a href=".">
+			<img src="./img/team/rocketleague.svg" alt="Rocket League" width="86" height="30" />
+		</a></li>
+		<li><a href=".">
+			<img src="./img/team/halo.svg" alt="Halo" width="195" height="28" />
+		</a></li>
+	</ul>
+</header>
+
+<section>
+	<div class="row">
+		<div class="col c12">{% include './includes/cards/_news.twig' %}</div>
+	</div>
+	<div class="row">
+		<div class="col c6">{% include './includes/cards/_news.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_news.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_news.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_news.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_news.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_news.twig' %}</div>
+	</div>
+	<div class="row">
+		<ul class="col c12 pagination">
+			<li class="prev"><a href=".">Previous</a></li>
+			<li><a href=".">1</a></li>
+			<li class="active"><a href=".">2</a></li>
+			<li><a href=".">3</a></li>
+			<li><a href=".">4</a></li>
+			<li><a href=".">5</a></li>
+			<li class="next"><a href=".">Next</a></li>
+		</ul>
+	</div>
+</section>
+
+{% endblock %}

@@ -1,8 +1,13 @@
 <nav>
-	<a class="logo" href="{{ siteUrl }}">home</a>
-	<div class="menu">
-		<a class="nav-item" href=".">Home</a>
-		<a class="nav-item" href=".">Blog</a>
-		<a class="nav-item" href=".">Contact</a>
-	</div>
+	<a class="logo" href="{{ siteUrl }}">
+		<img src="./img/logo.svg" width="185" height="60" alt="Naventic Logo" />
+	</a>
+	<ul class="menu">
+		
+		<li><a class="nav-item {% if page == "home" %}active{% endif %}" href="{{ siteUrl }}/">Home</a></li>
+		<li><a class="nav-item {% if page == "news" %}active{% endif %}" href="{{ siteUrl }}/news.html">News</a></li>
+		<li><a class="nav-item {% if page == "media" %}active{% endif %}" href="{{ siteUrl }}/media.html">Media</a></li>
+		<li><a class="nav-item {% if page == "team" %}active{% endif %}" href="{{ siteUrl }}/team.html">team</a></li>
+		<li><a class="nav-item {% if page == "store" %}active{% endif %}" href="{{ siteUrl }}/store.html">store</a></li>
+	</ul>
 </nav>

@@ -52,6 +52,7 @@
 	}
 }
 
+
 // Global Elements
 .metadata{
 	span{display: inline}
@@ -66,7 +67,7 @@
 
 // News
 .card-news{
-	.details{margin-top: $unit * 15}
+	.details{margin-top: 30%}
 	.title{margin-top: $unit}
 	.title,li{
 		@include easeOutCirc(.3s);
@@ -84,7 +85,7 @@
 	}
 }
 
-// Player
+// Player & store
 .card-player,.card-store{
 	.card-container{
 		height: 100%;
@@ -122,12 +123,13 @@
 				background-color: $background;
 				align-self: center;
 				margin: auto;
-				img{
-					@include easeOutCirc(1s);
-					max-width: 100%;
-					height: auto;
-					border-radius: 100%;
-				}
+			}
+			img{
+				@include easeOutCirc(.3s);
+				max-width: 100%;
+				height: auto;
+				border-radius: 100%;
+				transform: scale(.88)
 			}
 		}
 		&.avi-photo,&.product-photo{
@@ -150,9 +152,25 @@
 			img{transform: translateY(-$unit * 5);}
 		}
 		.avi-default{
-				img{transform: scale(.88)}
+			img{transform: scale(1)}
 		}
 
+	}
+}
+.hasAvi{
+	.avi-default{
+		display:none !important;
+	}
+	.avi-photo{
+		display:block !important;
+	}
+}
+.noAvi{
+	.avi-default{
+		display:flex !important;
+	}
+	.avi-photo{
+		display:none !important;
 	}
 }
 
@@ -212,6 +230,107 @@
 	}
 }
 
+
+// Alternates
+.c12{
+	.card-news{
+		.details{margin-top: 40%}
+	}
+}
+
+
+// Article
+.relatedContent,.recommendedContent{
+	
+	.card-container{
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: stretch;
+		align-items: stretch;
+		li{
+			display: inline-block;
+			width: auto;
+		}
+	}
+	.avatar-container,.details{
+		min-width: auto;
+		padding: 0;
+		min-height: 100%;
+	}
+	.avatar-container{
+		width: 33.33%;
+		float: left;
+		//background-color: rgba(255,0,0,0.3);
+		border-width: 0px;
+		.bg-image{display: none;}
+		&.avi-photo{
+			img{
+				top: -$unit;
+			}
+		}
+		&.avi-default{
+			.avatar{
+				overflow: visible;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				vertical-align: middle;
+				height: auto;
+				background-color: transparent;
+			}
+		}
+	}
+	.thumb{border-width: 0px;}
+	.card-player{
+		.metadata{display: none}
+		.details{
+			width: 66.66%;
+			float: right;
+			padding: $unit * 2 $unit;
+		}
+	}
+	.card-news{
+		.details{
+			padding: 1.8rem;
+			margin-top: 0;
+			.date{display: none;}
+		}
+	}
+	.card-store{
+		.card-container{
+			flex-direction: column;
+		}
+		.product-photo{
+			height: 100%;
+			width: 100%;
+			img{opacity: .3;}
+		}
+		.details{
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			width: 100%;
+			text-align: center;
+		}
+		&:hover{
+			.product-photo{
+				img{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	.card-store{
+		.product-photo{
+			@include cover;
+		}
+	}
+	
+	h3{
+		font-size: 				$font-size;
+		line-height: 			$line-height;
+	}
+}
 
 @media only screen and (max-width: $maxbody) {}
 @media only screen and (max-width: $minbody) {}

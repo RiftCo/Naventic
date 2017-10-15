@@ -1,0 +1,49 @@
+{# index.twig #}
+{% extends "_layout.twig" %}
+
+	{# Page Data #}
+	{% set page = "store" %}
+	{% set pageID = "storePage" %}
+
+	{# Metadata #}
+	{% set title = "Website Title" %}
+	{% set subTitle = "Page Title" %}
+	{% set date = "April 12th 2020" %}
+	{% set description = "Description" %}
+	{% set thumbnail = "img/thumbnail.jpg" %}
+
+{% block content %}
+
+<header id="top">
+	{% include './includes/template/_navigation.twig' %}
+	<div class="newsHeader row">
+		<div class="title">
+			<h6>Powered by Arma Centrum</h6>
+			<h1>Naventic Apparel Store</h1>
+		</div>
+	</div>
+</header>
+
+<section class="storeBody">
+	<div class="row">
+		<div class="col c6">{% include './includes/cards/_page-store.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_page-store.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_page-store.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_page-store.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_page-store.twig' %}</div>
+		<div class="col c6">{% include './includes/cards/_page-store.twig' %}</div>
+	</div>
+	<div class="row">
+		<ul class="col c12 pagination">
+			<li class="prev"><a href=".">Previous</a></li>
+			<li><a href=".">1</a></li>
+			<li class="active"><a href=".">2</a></li>
+			<li><a href=".">3</a></li>
+			<li><a href=".">4</a></li>
+			<li><a href=".">5</a></li>
+			<li class="next"><a href=".">Next</a></li>
+		</ul>
+	</div>
+</section>
+
+{% endblock %}
