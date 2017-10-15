@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<title> &middot; </title>
+	<!-- favicon -->
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	<!-- 32px -->
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+	<!-- 180px -->
+	<link rel="mask-icon" href="/img/website-icon.svg" color="#">
+	<!-- 256px -->
+	<meta name="msapplication-TileColor" content="#">
+	<meta name="theme-color" content="#">
+	<!-- seo-meta-global -->
+	<meta name="author" content="Client Name">
+	<link rel='me' type='text/html' href='http://twitter.com/TheOllieJT'>
+	<link rel="canonical" href="">
+	<!-- seo-meta-global - opengraph -->
+	<meta property="og:type" content="">
+	<meta property="og:site_name" content="Website Title">
+	<meta property="og:locale" content="en">
+	<!-- en_US -->
+	<meta property="article:author" content="Client Name">
+	<!-- seo-meta-global - twitter -->
+	<meta name="twitter:site" content="TheOllieJT" />
+	<meta name="twitter:card" content="summary" />
+	<!-- seo-meta-this-page -->
+	<meta property="og:title" content="">
+	<meta name="twitter:title" content="" />
+	<meta name="description" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta name="twitter:url" content="" />
+	<meta property="og:image" content="">
+	<meta name="twitter:image" content="" />
+	<meta name="keywords" content="">
+	<!-- global imports -->
+	<meta name="robots" content="robots.txt">
+	<link rel="author" href="humans.txt">
+	<link rel="manifest" href="manifest.json">
+	<!-- imports -->
+	<link rel="stylesheet" type="text/css" href="/style.css" media="bogus">
+	<style>
+		@charset "UTF-8";
+		/* line 1, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		html {
+			font-family: sans-serif;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* line 7, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		body {
+			margin: 0;
+		}
+
+		/* line 9, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		menu,
+		nav,
+		section,
+		summary {
+			display: block;
+		}
+
+		/* line 11, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		audio,
+		canvas,
+		progress,
+		video {
+			display: inline-block;
+			vertical-align: baseline;
+		}
+
+		/* line 16, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		audio:not([controls]) {
+			display: none;
+			height: 0;
+		}
+
+		/* line 21, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		[hidden],
+		template {
+			display: none;
+		}
+
+		/* line 23, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		a {
+			background-color: transparent;
+		}
+
+		/* line 24, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		a:active,
+		a:hover {
+			outline: 0;
+		}
+
+		/* line 26, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		abbr[title] {
+			border-bottom: 1px dotted;
+		}
+
+		/* line 27, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		b,
+		strong {
+			font-weight: 700;
+		}
+
+		/* line 28, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		dfn {
+			font-style: italic;
+		}
+
+		/* line 29, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		mark {
+			background: #ff0;
+			color: #000;
+		}
+
+		/* line 34, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		small {
+			font-size: 80%;
+		}
+
+		/* line 36, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		sub,
+		sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline;
+		}
+
+		/* line 42, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		sup {
+			top: -.5em;
+		}
+
+		/* line 43, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		sub {
+			bottom: -.25em;
+		}
+
+		/* line 45, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		img {
+			border: 0;
+		}
+
+		/* line 46, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		svg:not(:root) {
+			overflow: hidden;
+		}
+
+		/* line 47, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		figure {
+			margin: 1em 40px;
+		}
+
+		/* line 49, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		hr {
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0;
+		}
+
+		/* line 53, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		pre {
+			overflow: auto;
+		}
+
+		/* line 55, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		code,
+		kbd,
+		pre,
+		samp {
+			font-family: monospace, monospace;
+			font-size: 1em;
+		}
+
+		/* line 61, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		button,
+		input,
+		optgroup,
+		select,
+		textarea {
+			color: inherit;
+			font: inherit;
+			margin: 0;
+		}
+
+		/* line 66, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		button {
+			overflow: visible;
+		}
+
+		/* line 67, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		button,
+		select {
+			text-transform: none;
+		}
+
+		/* line 68, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		button,
+		html input[type=button],
+		input[type=reset],
+		input[type=submit] {
+			-webkit-appearance: button;
+			cursor: pointer;
+		}
+
+		/* line 72, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		button[disabled],
+		html input[disabled] {
+			cursor: default;
+		}
+
+		/* line 73, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		button::-moz-focus-inner,
+		input::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}
+
+		/* line 78, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		input {
+			line-height: normal;
+		}
+
+		/* line 79, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		input[type=checkbox],
+		input[type=radio] {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0;
+		}
+
+		/* line 83, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		input[type=number]::-webkit-inner-spin-button,
+		input[type=number]::-webkit-outer-spin-button {
+			height: auto;
+		}
+
+		/* line 84, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		input[type=search] {
+			-webkit-appearance: textfield;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+
+		/* line 88, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		input[type=search]::-webkit-search-cancel-button,
+		input[type=search]::-webkit-search-decoration {
+			-webkit-appearance: none;
+		}
+
+		/* line 89, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		fieldset {
+			border: 1px solid silver;
+			margin: 0 2px;
+			padding: .35em .625em .75em;
+		}
+
+		/* line 94, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		legend {
+			border: 0;
+			padding: 0;
+		}
+
+		/* line 98, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		textarea {
+			overflow: auto;
+		}
+
+		/* line 99, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		optgroup {
+			font-weight: 700;
+		}
+
+		/* line 100, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		/* line 104, sass/parts/_framework/boilerplate/_normalize.scss */
+
+		td,
+		th {
+			padding: 0;
+		}
+
+		/* line 6, sass/parts/_framework/boilerplate/_globals.scss */
+
+		html {
+			width: 100%;
+			overflow-x: hidden;
+			font-size: 62.5%;
+			font-smooth: always;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		/* line 16, sass/parts/_framework/boilerplate/_globals.scss */
+
+		body {
+			font-family: "San Francisco", -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+			min-height: 100vh;
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-color: #15191f;
+			position: relative;
+			overflow: hidden;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/* line 25, sass/parts/_framework/boilerplate/_globals.scss */
+
+		body * {
+			background-position: 50%;
+			background-size: cover;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/* line 33, sass/parts/_framework/boilerplate/_globals.scss */
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p {
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+		}
+
+		/* line 40, sass/parts/_framework/boilerplate/_globals.scss */
+
+		.cf:before,
+		.cf:after,
+		.row:before,
+		.row:after,
+		div:before,
+		div:after,
+		ol:before,
+		ol:after,
+		ul:before,
+		ul:after,
+		li:before,
+		li:after,
+		section:before,
+		section:after {
+			content: " ";
+			display: table;
+		}
+
+		/* line 44, sass/parts/_framework/boilerplate/_globals.scss */
+
+		.cf:after,
+		.row:after,
+		div:after,
+		ol:after,
+		ul:after,
+		li:after,
+		section:after {
+			clear: both;
+		}
+
+		/* line 47, sass/parts/_framework/boilerplate/_globals.scss */
+
+		.cf,
+		.row,
+		div,
+		ol,
+		ul,
+		li,
+		section {
+			*zoom: 1;
+		}
+
+		/* line 52, sass/parts/_framework/boilerplate/_globals.scss */
+
+		ul,
+		ol,
+		blockquote {
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0;
+			-webkit-margin-end: 0;
+		}
+
+		/* line 60, sass/parts/_framework/boilerplate/_globals.scss */
+
+		html,
+		body,
+		div,
+		span,
+		applet,
+		object,
+		iframe,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		blockquote,
+		pre,
+		a,
+		abbr,
+		acronym,
+		address,
+		big,
+		cite,
+		code,
+		del,
+		dfn,
+		em,
+		img,
+		ins,
+		kbd,
+		q,
+		s,
+		samp,
+		small,
+		strike,
+		strong,
+		sub,
+		sup,
+		tt,
+		var,
+		b,
+		u,
+		i,
+		center,
+		dl,
+		dt,
+		dd,
+		ol,
+		ul,
+		li,
+		fieldset,
+		form,
+		label,
+		legend,
+		table,
+		caption,
+		tbody,
+		tfoot,
+		thead,
+		tr,
+		th,
+		td,
+		article,
+		aside,
+		canvas,
+		details,
+		embed,
+		figure,
+		figcaption,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		output,
+		ruby,
+		section,
+		summary,
+		time,
+		mark,
+		audio,
+		video {
+			padding: 0;
+			border: 0;
+			vertical-align: baseline;
+		}
+
+		/* line 80, sass/parts/_framework/boilerplate/_globals.scss */
+
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		section {
+			display: block;
+		}
+
+		/* line 84, sass/parts/_framework/boilerplate/_globals.scss */
+
+		body {
+			line-height: 1;
+		}
+
+		/* line 87, sass/parts/_framework/boilerplate/_globals.scss */
+
+		ol,
+		ul {
+			list-style: none;
+		}
+
+		/* line 90, sass/parts/_framework/boilerplate/_globals.scss */
+
+		blockquote,
+		q {
+			quotes: none;
+		}
+
+		/* line 93, sass/parts/_framework/boilerplate/_globals.scss */
+
+		blockquote:before,
+		blockquote:after,
+		q:before,
+		q:after {
+			content: '';
+			content: none;
+		}
+
+		/* line 97, sass/parts/_framework/boilerplate/_globals.scss */
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		/* line 7, sass/parts/_framework/_grid.scss */
+
+		.row {
+			position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			width: 100%;
+			max-width: 918px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0 auto;
+			padding: 0 0.9rem;
+		}
+
+		/* line 16, sass/parts/_framework/_grid.scss */
+
+		.row::before {
+			display: none;
+		}
+
+		/* line 17, sass/parts/_framework/_grid.scss */
+
+		.row::after {
+			display: none;
+		}
+
+		/* line 19, sass/parts/_framework/_grid.scss */
+
+		.col {
+			padding-left: 0.9rem;
+			padding-right: 0.9rem;
+			padding-bottom: 1.8rem;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			max-width: 100%;
+		}
+
+		/* line 25, sass/parts/_framework/_grid.scss */
+
+		.col header,
+		.col section,
+		.col footer,
+		.col div,
+		.col span {
+			display: block;
+		}
+
+		/* line 28, sass/parts/_framework/_grid.scss */
+
+		.col.c1 {
+			-webkit-box-flex: 1;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			-ms-flex-negative: 11;
+			flex-shrink: 11;
+			-ms-flex-preferred-size: 8.33%;
+			flex-basis: 8.33%;
+		}
+
+		/* line 33, sass/parts/_framework/_grid.scss */
+
+		.col.c2 {
+			-webkit-box-flex: 2;
+			-ms-flex-positive: 2;
+			flex-grow: 2;
+			-ms-flex-negative: 10;
+			flex-shrink: 10;
+			-ms-flex-preferred-size: 16.66%;
+			flex-basis: 16.66%;
+		}
+
+		/* line 38, sass/parts/_framework/_grid.scss */
+
+		.col.c3 {
+			-webkit-box-flex: 3;
+			-ms-flex-positive: 3;
+			flex-grow: 3;
+			-ms-flex-negative: 9;
+			flex-shrink: 9;
+			-ms-flex-preferred-size: 25%;
+			flex-basis: 25%;
+		}
+
+		/* line 43, sass/parts/_framework/_grid.scss */
+
+		.col.c4 {
+			-webkit-box-flex: 4;
+			-ms-flex-positive: 4;
+			flex-grow: 4;
+			-ms-flex-negative: 8;
+			flex-shrink: 8;
+			-ms-flex-preferred-size: 33.33%;
+			flex-basis: 33.33%;
+		}
+
+		/* line 48, sass/parts/_framework/_grid.scss */
+
+		.col.c5 {
+			-webkit-box-flex: 5;
+			-ms-flex-positive: 5;
+			flex-grow: 5;
+			-ms-flex-negative: 7;
+			flex-shrink: 7;
+			-ms-flex-preferred-size: 41.66%;
+			flex-basis: 41.66%;
+		}
+
+		/* line 53, sass/parts/_framework/_grid.scss */
+
+		.col.c6 {
+			-webkit-box-flex: 6;
+			-ms-flex-positive: 6;
+			flex-grow: 6;
+			-ms-flex-negative: 6;
+			flex-shrink: 6;
+			-ms-flex-preferred-size: 50%;
+			flex-basis: 50%;
+		}
+
+		/* line 58, sass/parts/_framework/_grid.scss */
+
+		.col.c7 {
+			-webkit-box-flex: 7;
+			-ms-flex-positive: 7;
+			flex-grow: 7;
+			-ms-flex-negative: 5;
+			flex-shrink: 5;
+			-ms-flex-preferred-size: 58.33%;
+			flex-basis: 58.33%;
+		}
+
+		/* line 63, sass/parts/_framework/_grid.scss */
+
+		.col.c8 {
+			-webkit-box-flex: 8;
+			-ms-flex-positive: 8;
+			flex-grow: 8;
+			-ms-flex-negative: 4;
+			flex-shrink: 4;
+			-ms-flex-preferred-size: 66.66%;
+			flex-basis: 66.66%;
+		}
+
+		/* line 68, sass/parts/_framework/_grid.scss */
+
+		.col.c9 {
+			-webkit-box-flex: 9;
+			-ms-flex-positive: 9;
+			flex-grow: 9;
+			-ms-flex-negative: 3;
+			flex-shrink: 3;
+			-ms-flex-preferred-size: 75%;
+			flex-basis: 75%;
+		}
+
+		/* line 73, sass/parts/_framework/_grid.scss */
+
+		.col.c10 {
+			-webkit-box-flex: 10;
+			-ms-flex-positive: 10;
+			flex-grow: 10;
+			-ms-flex-negative: 2;
+			flex-shrink: 2;
+			-ms-flex-preferred-size: 83.33%;
+			flex-basis: 83.33%;
+		}
+
+		/* line 78, sass/parts/_framework/_grid.scss */
+
+		.col.c11 {
+			-webkit-box-flex: 11;
+			-ms-flex-positive: 11;
+			flex-grow: 11;
+			-ms-flex-negative: 1;
+			flex-shrink: 1;
+			-ms-flex-preferred-size: 91.66%;
+			flex-basis: 91.66%;
+		}
+
+		/* line 83, sass/parts/_framework/_grid.scss */
+
+		.col.c12 {
+			-webkit-box-flex: 12;
+			-ms-flex-positive: 12;
+			flex-grow: 12;
+			-ms-flex-negative: 0;
+			flex-shrink: 0;
+			-ms-flex-preferred-size: 100%;
+			flex-basis: 100%;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			/* line 91, sass/parts/_framework/_grid.scss */
+			.row {
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+			}
+		}
+
+		@media only screen and (max-width: 860px) {
+			/* line 97, sass/parts/_framework/_grid.scss */
+			.row,
+			.col {
+				display: block;
+			}
+		}
+
+		/* line 8, sass/parts/_framework/_typography.scss */
+
+		body,
+		p,
+		li,
+		figcaption {
+			font-size: 1.8rem;
+			line-height: 3rem;
+			font-weight: 400;
+			color: #909399;
+		}
+
+		/* line 14, sass/parts/_framework/_typography.scss */
+
+		h1 {
+			font-size: 4.8rem;
+			line-height: 6rem;
+			font-weight: 700;
+		}
+
+		/* line 19, sass/parts/_framework/_typography.scss */
+
+		h2 {
+			font-size: 3.6rem;
+			line-height: 4.8rem;
+			font-weight: 400;
+		}
+
+		/* line 24, sass/parts/_framework/_typography.scss */
+
+		h3 {
+			font-size: 3rem;
+			line-height: 4.2rem;
+			font-weight: 500;
+		}
+
+		/* line 29, sass/parts/_framework/_typography.scss */
+
+		h4 {
+			font-size: 2.4rem;
+			line-height: 3.6rem;
+			font-weight: 400;
+		}
+
+		/* line 34, sass/parts/_framework/_typography.scss */
+
+		h5 {
+			font-size: 1.8rem;
+			line-height: 3rem;
+			font-weight: 500;
+		}
+
+		/* line 39, sass/parts/_framework/_typography.scss */
+
+		h6 {
+			font-size: 1.5rem;
+			line-height: 2.7rem;
+			font-weight: 500;
+		}
+
+		/* line 47, sass/parts/_framework/_typography.scss */
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #e9ebf0;
+		}
+
+		/* line 49, sass/parts/_framework/_typography.scss */
+
+		p a,
+		figcaption a,
+		ul a,
+		ol a,
+		li a {
+			color: #95824e;
+		}
+
+		/* line 50, sass/parts/_framework/_typography.scss */
+
+		p a:hover,
+		figcaption a:hover,
+		ul a:hover,
+		ol a:hover,
+		li a:hover {
+			color: #ac9860;
+		}
+
+		/* line 54, sass/parts/_framework/_typography.scss */
+
+		.invert-txt h1,
+		.invert-txt h2,
+		.invert-txt h3,
+		.invert-txt h4,
+		.invert-txt h5,
+		.invert-txt h6 {
+			color: #43474d;
+		}
+
+		/* line 55, sass/parts/_framework/_typography.scss */
+
+		.invert-txt p,
+		.invert-txt figcaption,
+		.invert-txt li {
+			color: rgba(67, 71, 77, 0.4);
+		}
+
+		/* line 60, sass/parts/_framework/_typography.scss */
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p {
+			margin: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		/* line 65, sass/parts/_framework/_typography.scss */
+
+		li {
+			list-style: none;
+			display: inline-block;
+		}
+
+		/* line 70, sass/parts/_framework/_typography.scss */
+
+		article h1,
+		article h2,
+		article h3,
+		article h4,
+		article h5,
+		article h6,
+		.typography h1,
+		.typography h2,
+		.typography h3,
+		.typography h4,
+		.typography h5,
+		.typography h6 {
+			margin-top: 0;
+			margin-bottom: 0.6rem;
+		}
+
+		/* line 74, sass/parts/_framework/_typography.scss */
+
+		article p,
+		.typography p {
+			margin-top: 0.6rem;
+			margin-bottom: 1.8rem;
+		}
+
+		/* line 77, sass/parts/_framework/_typography.scss */
+
+		article p:last-of-type,
+		.typography p:last-of-type {
+			margin-bottom: 0;
+		}
+
+		/* line 80, sass/parts/_framework/_typography.scss */
+
+		article ul li,
+		article ol li,
+		.typography ul li,
+		.typography ol li {
+			margin: 1.2rem;
+			margin-right: -1.2rem;
+			max-width: 100%;
+			display: block;
+		}
+
+		/* line 88, sass/parts/_framework/_typography.scss */
+
+		article ul,
+		.typography ul {
+			list-style-position: inside;
+		}
+
+		/* line 90, sass/parts/_framework/_typography.scss */
+
+		article ul li,
+		.typography ul li {
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+
+		/* line 94, sass/parts/_framework/_typography.scss */
+
+		article ul li:before,
+		.typography ul li:before {
+			float: left;
+			font-weight: 700;
+			color: #909399;
+		}
+
+		/* line 100, sass/parts/_framework/_typography.scss */
+
+		article ol,
+		.typography ol {
+			counter-reset: my-badass-counter;
+		}
+
+		/* line 102, sass/parts/_framework/_typography.scss */
+
+		article ol li,
+		.typography ol li {
+			counter-increment: my-badass-counter;
+		}
+
+		/* line 105, sass/parts/_framework/_typography.scss */
+
+		article ol li:before,
+		.typography ol li:before {
+			content: counter(my-badass-counter) ".";
+			float: left;
+			margin-right: 1.2rem;
+			font-weight: 700;
+		}
+
+		/* line 116, sass/parts/_framework/_typography.scss */
+
+		a {
+			text-decoration: none;
+			display: inline-block;
+			color: inherit;
+		}
+
+		/* line 121, sass/parts/_framework/_typography.scss */
+
+		a:hover {
+			color: inherit;
+		}
+
+		/* line 122, sass/parts/_framework/_typography.scss */
+
+		em {
+			font-style: italic;
+			opacity: .82;
+		}
+
+		/* line 126, sass/parts/_framework/_typography.scss */
+
+		strong,
+		b {
+			font-weight: 500;
+		}
+
+		/* line 128, sass/parts/_framework/_typography.scss */
+
+		strongh1,
+		bh1 {
+			color: #ac9860;
+		}
+
+		/* line 129, sass/parts/_framework/_typography.scss */
+
+		strongh3,
+		strongh5,
+		strongh6,
+		bh3,
+		bh5,
+		bh6 {
+			font-weight: 700;
+		}
+
+		/* line 134, sass/parts/_framework/_typography.scss */
+
+		figure {
+			display: inline-block;
+			width: 100%;
+			margin: 3rem auto;
+			text-align: center;
+		}
+
+		/* line 139, sass/parts/_framework/_typography.scss */
+
+		figure img {
+			display: inline-block;
+			padding: 0;
+			margin: 0 auto;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			max-width: 100%;
+			height: auto;
+		}
+
+		/* line 148, sass/parts/_framework/_typography.scss */
+
+		figcaption {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			padding: 1.8rem;
+			color: #909399;
+		}
+
+		/* line 157, sass/parts/_framework/_typography.scss */
+
+		blockquote {
+			position: relative;
+			margin: 3rem 0;
+			padding: 1.8rem;
+			border-style: solid;
+			border-width: 1px 1px 1px 4px;
+			border-color: #ac9860;
+			border-left-color: #ac9860;
+		}
+
+		/* line 165, sass/parts/_framework/_typography.scss */
+
+		blockquote strong {
+			color: #ac9860;
+		}
+
+		/*# sourceMappingURL=inline.css.map */
+	</style>
+</head>
+
+<body class="articlePage">
+	<header id="top">
+		<nav> <a class="logo" href="">
+		<img src="./img/logo.svg" width="185" height="60" alt="Naventic Logo" />
+	</a>
+			<ul class="menu">
+				<li><a class="nav-item " href="/">Home</a></li>
+				<li><a class="nav-item active" href="/news.html">News</a></li>
+				<li><a class="nav-item " href="/media.html">Media</a></li>
+				<li><a class="nav-item " href="/team.html">team</a></li>
+				<li><a class="nav-item " href="/store.html">store</a></li>
+			</ul>
+		</nav>
+		<div class="articleHeader row">
+			<div class="title">
+				<h6><span>CSGO Event</span> 3 Days Ago</h6>
+				<h1>Naventic bring home the win at ESL New York 2017</h1>
+			</div>
+		</div>
+	</header>
+	<section class="row articleBody">
+		<article class="col c8"> <img src="./img/article/thumbs/thumb-17.jpg" alt="Article Title" width="606" height="340.7" />
+			<p> If you fucking give up, you will achieve nothing. Remember it’s called the creative process, it’s not the creative fucking moment. Never let your guard down by thinking you’re fucking good enough. The graphic designer’s first fucking consideration is always the size and shape of the format, whether for the printed page or for digital display. When you sit down to work, external critics aren’t the enemy. It’s you who you must to fight against to do great fucking work. You must overcome yourself. Form follows fucking function. </p>
+			<p> A good fucking composition is the result of a hierarchy consisting of clearly contrasting elements set with distinct alignments containing irregular intervals of negative space. Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design, because that is what it lives with. The new becomes threatening, the old reassuring.” Think about all the fucking possibilities. Someday is not a fucking day of the week. Fuck. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect and accept the fucking possibility of failure. </p>
+			<p> When you design, you have to draw on your own fucking life experiences. If it’s not something you would want to read/look at/use then why fucking bother? Your rapidograph pens are fucking dried up, the x-acto blades in your bag are rusty, and your mind is dull. Stop clicking your mouse, get messy, go back to the basics and make something fucking original. Form follows fucking function. Respect your fucking craft. </p>
+			<p> Respect your fucking craft. Intuition is fucking important. Must-do is a good fucking master. Don’t fucking lie to yourself. </p>
+		</article>
+		<aside class="col c4">
+			<ul class="relatedContent">
+				<li class="hasAvi">
+					<div class="card card-player">
+						<div class="card-container">
+							<div class="avatar-container avi-default">
+								<div class="avatar"> <img src="./img/player/default/avatar@2x.jpg" alt="player" width="120" height="120" /> </div>
+								<div class="bg-image" style="background-image: url('./img/article/thumbs/thumb-3.jpg')"></div>
+							</div>
+							<div class="avatar-container avi-photo"> <img src="./img/player/default/photo@2x.png" alt="player" width="294" height="530" /> </div>
+							<div class="details">
+								<h3>RyaNoob</h3>
+								<h6>Ryan Geddes</h6>
+								<ul class="metadata">
+									<li>
+										<h6>Age: <span>23</span></h6>
+									</li>
+									<li class="social">
+										<h6>Twitter: <a href="." target="_blank" rel="nofollow">@RyaNoob</a></h6>
+									</li>
+									<li class="social">
+										<h6>Twitch: <a href="." target="_blank" rel="nofollow">twitch.tv/RyaNoob</a></h6>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="noAvi">
+					<div class="card card-player">
+						<div class="card-container">
+							<div class="avatar-container avi-default">
+								<div class="avatar"> <img src="./img/player/default/avatar@2x.jpg" alt="player" width="120" height="120" /> </div>
+								<div class="bg-image" style="background-image: url('./img/article/thumbs/thumb-3.jpg')"></div>
+							</div>
+							<div class="avatar-container avi-photo"> <img src="./img/player/default/photo@2x.png" alt="player" width="294" height="530" /> </div>
+							<div class="details">
+								<h3>RyaNoob</h3>
+								<h6>Ryan Geddes</h6>
+								<ul class="metadata">
+									<li>
+										<h6>Age: <span>23</span></h6>
+									</li>
+									<li class="social">
+										<h6>Twitter: <a href="." target="_blank" rel="nofollow">@RyaNoob</a></h6>
+									</li>
+									<li class="social">
+										<h6>Twitch: <a href="." target="_blank" rel="nofollow">twitch.tv/RyaNoob</a></h6>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="card card-store" href="." rel="prefetch" target="_self">
+						<div class="card-container">
+							<div class="thumb product-photo">
+								<!--<div class="price sale"><h6>$44.99</h6></div>--><img src="./img/store/default/photo@2x.png" alt="player" width="294" height="360" /> </div>
+							<div class="details">
+								<h5>Main Jersey</h5>
+								<h6>Official Team Jersey</h6>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="recommendedContent">
+				<li class="recommendedContentTitle">
+					<h6>Recommended:</h6>
+				</li>
+				<li>
+					<a class="card card-news" href="./article.html" rel="prefetch" target="_self">
+						<div class="card-container">
+							<div class="details">
+								<ul class="metadata">
+									<li class="date">
+										<h6>3 Days Ago</h6>
+									</li>
+									<li class="tag">
+										<h6>CSGO</h6>
+									</li>
+									<li class="tag">
+										<h6>Event</h6>
+									</li>
+								</ul>
+								<h3 class="title">Naventic take home the win at ESL New York 2017</h3>
+							</div>
+						</div>
+						<div class="bg-image" style="background-image: url('./img/article/thumbs/thumb-3.jpg')"> <span class="overlay hover"></span> </div>
+					</a>
+				</li>
+			</ul>
+		</aside>
+	</section>
+	<footer>
+		<div class="logo"> <span href="#top">
+			<img src="./img/logo-icon.svg" alt="Naventic Logo" width="50.6" height="60"/>
+		</span> </div>
+		<section class="sponsorContainer"> <a href="." target="_blank">
+		<img src="./img/sponsor/rift.svg" alt="Digital Rift" width="116" height="30" />
+	</a> <a href="." target="_blank">
+		<img src="./img/sponsor/astro.svg" alt="Astro Gaming" width="138" height="30" />
+	</a> <a href="." target="_blank">
+		<img src="./img/sponsor/brisk.svg" alt="Brisk Mate" width="72" height="42" />
+	</a> <a href="." target="_blank">
+		<img src="./img/sponsor/rift.svg" alt="Digital Rift" width="116" height="30" />
+	</a> <a href="." target="_blank">
+		<img src="./img/sponsor/astro.svg" alt="Astro Gaming" width="138" height="30" />
+	</a> <a href="." target="_blank">
+		<img src="./img/sponsor/brisk.svg" alt="Brisk Mate" width="72" height="42" />
+	</a> </section>
+		<div class="row">
+			<div class="col c8">
+				<p>&copy; 2017 <span>Naventic</span>. All Rights Reserved.</p>
+				<h6 class="credit">Website by <a href="//digitalrift.co" target="_blank">Digital Rift</a>.</h6>
+			</div>
+			<ul class="col c4 footerLinks">
+				<li><a href="/demo.html">Brand Guidelines</a></li>
+			</ul>
+		</div>
+		<div class="legal"></div>
+	</footer>
+	<!-- imports -->
+	<!--<script src="." type="text/javascript" async ></script>-->
+	<link rel="stylesheet" type="text/css" href="/style.css"> </body>
+
+</html>
