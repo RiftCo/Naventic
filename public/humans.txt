@@ -1,0 +1,18 @@
+/* TEAM */
+	Design & Frontend: Ollie Taylor
+	Backend: Tom Wade
+	Contact: digitalrift.co
+	Twitter: @RiftCo
+	From: England, UK
+
+/* THANKS */
+
+	HumansTXT
+	http://humanstxt.org
+
+
+/* SITE */
+	Last update: October 2017
+	Language: English
+	Doctype: HTML5
+	IDE: SketchApp, VS Code, Chrome Dev Tools, Cyberduck, Github, Wordpress

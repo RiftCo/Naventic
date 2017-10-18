@@ -26,6 +26,9 @@ var
 var pe = new PrettyError();
 pe.start();
 
+
+
+
 var basePath = {
 	src: './',
 	build: '../build/',
@@ -61,13 +64,6 @@ var path = {
 		src: basePath.src + 'assets/src/',
 		build: basePath.build + 'src/',
 		publish: basePath.publish + 'src/'
-	},
-	build: {
-		css: basePath.build + '**/*.css',
-		js: basePath.build + '**/*.js',
-		html: basePath.build + '**/*.html',
-		setup: basePath.additional + '**/*',
-		all: basePath.build + '**/*'
 	}
 };
 var file = {
@@ -145,7 +141,8 @@ gulps.registerTasks({
 
 
 			done();
-		},3500);
+		},
+			2000);
 
 	}),
 	"inlineSass": (function (done) {
@@ -188,16 +185,15 @@ gulps.registerTasks({
 			done(
 				(console.log(util.colors.bgGreen.black.bold('\nFinished Inline SASS\n')))
 			);
-		},3500);
+		},
+			2000);
 
 	}),
 
-	
 	// Markup
-	"twig": (function () {
+	"twig": (function (done) {
 		setTimeout(function () {
 			console.log(util.colors.bgBlue.black.bold('\nStarting TWIG\n'))
-			/*
 			var options = {
 				"indent_size": 1,
 				"indent_char": "	",
@@ -219,7 +215,7 @@ gulps.registerTasks({
 				"wrap_attributes": "auto",
 				"wrap_attributes_indent_size": 3,
 				"end_with_newline": false
-			};*/
+			};
 			
 			// Source
 			gulp.src(file.markup)
@@ -240,7 +236,8 @@ gulps.registerTasks({
 						twitter_username: 'TheOllieJT',
 
 						// URL
-						siteUrl: ''
+						siteUrl: '',
+						tags: '["olliejt", "olliejt website design", "olliejt design"]'
 					},
 					base: path.markup.src,
 					getIncludeId: function (filePath) {
@@ -255,7 +252,7 @@ gulps.registerTasks({
 
 				// Minify
 				//.pipe(strip())
-				//.pipe(htmlbeautify(options))
+				.pipe(htmlbeautify(options))
 
 
 				// Export
@@ -266,7 +263,9 @@ gulps.registerTasks({
 					console.log(util.colors.bgGreen.black.bold('\nFinished Twig\n')))
 				)
 
-		},3500);
+			done();
+		},
+			2500);
 	}),
 	
 	// Assets
@@ -288,7 +287,8 @@ gulps.registerTasks({
 				)
 			))
 			done();
-		},2000);
+		},
+			500);
 	}),
 	"scripts": (function (done) {
 		setTimeout(function () {
@@ -312,13 +312,16 @@ gulps.registerTasks({
 				)
 			))
 			done();
-		},2000);
+		},
+			500);
 	}),
 	"other": (function (done) {
 		setTimeout(function () {
 
 			// Source
 			gulp.src(file.other)
+			
+			.pipe(uglify())	
 			
 			// Copy Location	
 			.pipe(gulp.dest(path.other.build))
@@ -333,7 +336,8 @@ gulps.registerTasks({
 				)
 			))
 			done();
-		},2000);
+		},
+			500);
 	}),
 
 
@@ -349,20 +353,21 @@ gulps.registerTasks({
 			gulp.watch(file.script, ["scripts", "updated"])
 
 			done(console.log(util.colors.bgBlack.magenta.bold('\nWatching!\n')));
-		},5000);
+		},
+			3000);
 	}),
 	"connect": (function (done) {
 		setTimeout(function () {
 
 			connect.server({
 				root: basePath.build,
-				port: 9876,
 				livereload: 'true'
 			});
 
-			done(console.log(util.colors.bgBlack.magenta.bold('\nConnected!\n')));
+			done(console.log(util.colors.bgBlack.magenta.bold('\Connected!\n')));
 
-		},5000);
+		},
+			2000);
 	}),
 	"updated": (function () {
 		setTimeout(function () {
@@ -374,7 +379,9 @@ gulps.registerTasks({
 				.pipe(connect.reload(
 					console.log(util.colors.bgGreen.black.bold('\nUpdated\n')))
 				)
-		},5000);
+
+		},
+			500);
 	}),
 
 
@@ -398,41 +405,25 @@ gulps.registerTasks({
 			});
 
 			done();
-		},2000);
+		},
+			500);
 	}),
 
 
 	// Publish
 	"publish": (function (done) {
 		setTimeout(function () {
-			
-			// copy build to public
-			gulp.src(path.build.setup)
-				.pipe(plumber())
-				.pipe(gulp.dest(basePath.publish))
-				console.log('setup')
-			
-			gulp.src(path.build.all)
-				.pipe(plumber())
-				.pipe(gulp.dest(basePath.publish))
-				console.log('copied build')
-			
-			// Minify CSS
-			gulp.src(path.build.css)
-				.pipe(plumber())
-				//.pipe(strip())
-				.pipe(cleanCSS({ compatibility: 'ie8' }))
-				.pipe(gulp.dest(basePath.publish))
-				console.log('minified css')
-			
-			// Minify HTML
-			gulp.src(path.build.html)
-				.pipe(plumber())
-				.pipe(strip())
-				.pipe(gulp.dest(basePath.publish))
-				console.log('minified html')
 
-		
+			// Source
+			gulp.src(basePath.build)
+				// Copy Location	
+				.pipe(gulp.dest(basePath.publish));
+
+			// Source
+			gulp.src(basePath.additional)
+				// Copy Location	
+				.pipe(gulp.dest(basePath.publish));
+
 			done(
 				console.log(
 					'\n' +
@@ -446,7 +437,8 @@ gulps.registerTasks({
 				)
 			);
 
-		},8000);
+		},
+			500);
 	})
 
 
@@ -470,16 +462,15 @@ gulps.registerSeries("clean", ["clean"], function () { });
 gulps.registerSeries('serve',
 	[
 		// CLEAN
-		//"clean",
+		"clean",
 		// CSS
 		"sass",
-		//"inlineSass",
+		"inlineSass",
 		// HTML
 		"twig",
 		// Assets
 		"images",
 		"scripts",
-		"other",
 		// Localhost
 		"connect",
 		"watch",
@@ -489,59 +480,37 @@ gulps.registerSeries('serve',
 		console.log(util.colors.green.bold('DEV MODE: ') + util.colors.white.bold('ENABLED') + util.colors.red.bold(' Watching...'))
 	});
 
-	gulps.registerSeries('dev',
-	[
-		// Localhost
-		"connect",
-		"watch",
-		"updated"
-
-	], function () {
-		console.log(util.colors.green.bold('DEV MODE: ') + util.colors.white.bold('ENABLED') + util.colors.red.bold(' Watching...'))
-	});
-	
 // Generates all development files
 gulps.registerSeries("build",
 	[
 		// CLEAN
-		//"clean",
+		"clean",
 		//CSS
 		"sass",
-		//"inlineSass",
+		"inlineSass",
 		// HTML
 		"twig",
 		// Assets
 		"images",
-		"scripts",
-		"other"
+		"scripts"
 
 	], function () {
 		console.log(util.colors.green.bold('BUILD: ') + util.colors.white.bold('COMPLETED') + util.colors.white('&') + util.colors.white.bold('COMPRESSED'))
-});
-
-// Generates all development files
-gulps.registerSeries("twig",
-[
-	"twig"
-
-], function () {
-	console.log(util.colors.green.bold('BUILD: ') + util.colors.white.bold('COMPLETED') + util.colors.white('&') + util.colors.white.bold('COMPRESSED'))
 });
 
 // Generates and bundles all files
 gulps.registerSeries('publish',
 	[
 		// CLEAN
-		//"clean",
+		"clean",
 		//CSS
 		"sass",
-		//"inlineSass",
+		"inlineSass",
 		// HTML
 		"twig",
 		// Assets
 		"images",
 		"scripts",
-		"other",
 		// Publish
 		"publish"
 

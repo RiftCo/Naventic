@@ -1,0 +1,72 @@
+/* line 10, sass/parts/pages/team.scss */
+.homepageHeader {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  /* line 14, sass/parts/pages/team.scss */
+  .homepageHeader .header-left, .homepageHeader .header-right {
+    width: 50%; }
+  /* line 17, sass/parts/pages/team.scss */
+  .homepageHeader .header-left {
+    min-height: 600px; }
+  /* line 21, sass/parts/pages/team.scss */
+  .homepageHeader .header-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  /* line 25, sass/parts/pages/team.scss */
+  .homepageHeader .header-right-top, .homepageHeader .header-right-bottom {
+    display: block;
+    width: 100%;
+    height: 50%; }
+  /* line 30, sass/parts/pages/team.scss */
+  .homepageHeader .header-right-top {
+    position: relative; }
+  /* line 33, sass/parts/pages/team.scss */
+  .homepageHeader .header-right-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    /* line 35, sass/parts/pages/team.scss */
+    .homepageHeader .header-right-bottom .card {
+      width: 50%;
+      height: 100%; }
+
+@media only screen and (max-width: 1200px) {
+  /* line 46, sass/parts/pages/team.scss */
+  .homepageHeader {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    /* line 48, sass/parts/pages/team.scss */
+    .homepageHeader .header-left, .homepageHeader .header-right {
+      width: 100%; }
+    /* line 49, sass/parts/pages/team.scss */
+    .homepageHeader .header-left {
+      min-height: 500px; }
+    /* line 50, sass/parts/pages/team.scss */
+    .homepageHeader .header-right {
+      min-height: 50vw; } }
+
+@media only screen and (max-width: 860px) {
+  /* line 57, sass/parts/pages/team.scss */
+  .homepageHeader .header-left {
+    min-height: 300px; }
+  /* line 58, sass/parts/pages/team.scss */
+  .homepageHeader .header-right {
+    min-height: 75vw; }
+  /* line 59, sass/parts/pages/team.scss */
+  .homepageHeader .header-right-bottom {
+    min-height: 35vw; } }
+
+@media only screen and (max-width: 540px) {
+  /* line 64, sass/parts/pages/team.scss */
+  .homepageHeader .header-right {
+    min-height: 100vw; }
+  /* line 65, sass/parts/pages/team.scss */
+  .homepageHeader .header-left, .homepageHeader .header-right-bottom {
+    min-height: 50vw; } }
+
+/*# sourceMappingURL=team.css.map */

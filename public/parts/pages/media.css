@@ -1,0 +1,75 @@
+/* line 9, sass/parts/pages/media.scss */
+.mediaFilter {
+  margin: 1.8rem 0;
+  position: relative;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  /* line 15, sass/parts/pages/media.scss */
+  .mediaFilter li, .mediaFilter a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  /* line 20, sass/parts/pages/media.scss */
+  .mediaFilter li {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  /* line 24, sass/parts/pages/media.scss */
+  .mediaFilter a {
+    -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-style: solid;
+    padding: 1.8rem 3rem;
+    border-width: 1px 1px 1px 1px;
+    border-color: transparent; }
+    /* line 33, sass/parts/pages/media.scss */
+    .mediaFilter a img {
+      -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+      transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-filter 0.1s ease-in-out;
+      transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out;
+      transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.1s ease-in-out, -webkit-filter 0.1s ease-in-out;
+      opacity: .6;
+      -webkit-transform: scale(0.94);
+              transform: scale(0.94); }
+    /* line 38, sass/parts/pages/media.scss */
+    .mediaFilter a:hover, .mediaFilter a.active {
+      border-color: #ac9860; }
+      /* line 40, sass/parts/pages/media.scss */
+      .mediaFilter a:hover p, .mediaFilter a.active p {
+        color: #ac9860; }
+
+/* line 48, sass/parts/pages/media.scss */
+.video, .videoChat {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; }
+  /* line 52, sass/parts/pages/media.scss */
+  .video iframe, .videoChat iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* line 56, sass/parts/pages/media.scss */
+.videoChat {
+  padding-bottom: 88%; }
+
+/*# sourceMappingURL=media.css.map */

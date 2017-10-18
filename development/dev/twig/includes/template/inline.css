@@ -287,19 +287,20 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 0.9rem; }
-  /* line 15, sass/parts/_framework/_grid.scss */
+  padding: 0 0.9rem;
+  z-index: 3; }
+  /* line 16, sass/parts/_framework/_grid.scss */
   .row::before, .wideNews::before {
     display: none; }
-  /* line 16, sass/parts/_framework/_grid.scss */
+  /* line 17, sass/parts/_framework/_grid.scss */
   .row::after, .wideNews::after {
     display: none; }
 
-/* line 18, sass/parts/_framework/_grid.scss */
+/* line 19, sass/parts/_framework/_grid.scss */
 .row {
   max-width: 918px; }
 
-/* line 21, sass/parts/_framework/_grid.scss */
+/* line 22, sass/parts/_framework/_grid.scss */
 .col {
   padding-left: 0.9rem;
   padding-right: 0.9rem;
@@ -307,10 +308,10 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 100%; }
-  /* line 27, sass/parts/_framework/_grid.scss */
+  /* line 28, sass/parts/_framework/_grid.scss */
   .col header, .col section, .col footer, .col div, .col span {
     display: block; }
-  /* line 30, sass/parts/_framework/_grid.scss */
+  /* line 31, sass/parts/_framework/_grid.scss */
   .col.c1 {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -319,7 +320,7 @@ table {
         flex-shrink: 11;
     -ms-flex-preferred-size: 8.33%;
         flex-basis: 8.33%; }
-  /* line 35, sass/parts/_framework/_grid.scss */
+  /* line 36, sass/parts/_framework/_grid.scss */
   .col.c2 {
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
@@ -328,7 +329,7 @@ table {
         flex-shrink: 10;
     -ms-flex-preferred-size: 16.66%;
         flex-basis: 16.66%; }
-  /* line 40, sass/parts/_framework/_grid.scss */
+  /* line 41, sass/parts/_framework/_grid.scss */
   .col.c3 {
     -webkit-box-flex: 3;
         -ms-flex-positive: 3;
@@ -337,7 +338,7 @@ table {
         flex-shrink: 9;
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%; }
-  /* line 45, sass/parts/_framework/_grid.scss */
+  /* line 46, sass/parts/_framework/_grid.scss */
   .col.c4 {
     -webkit-box-flex: 4;
         -ms-flex-positive: 4;
@@ -346,7 +347,7 @@ table {
         flex-shrink: 8;
     -ms-flex-preferred-size: 33.33%;
         flex-basis: 33.33%; }
-  /* line 50, sass/parts/_framework/_grid.scss */
+  /* line 51, sass/parts/_framework/_grid.scss */
   .col.c5 {
     -webkit-box-flex: 5;
         -ms-flex-positive: 5;
@@ -355,7 +356,7 @@ table {
         flex-shrink: 7;
     -ms-flex-preferred-size: 41.66%;
         flex-basis: 41.66%; }
-  /* line 55, sass/parts/_framework/_grid.scss */
+  /* line 56, sass/parts/_framework/_grid.scss */
   .col.c6 {
     -webkit-box-flex: 6;
         -ms-flex-positive: 6;
@@ -364,7 +365,7 @@ table {
         flex-shrink: 6;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%; }
-  /* line 60, sass/parts/_framework/_grid.scss */
+  /* line 61, sass/parts/_framework/_grid.scss */
   .col.c7 {
     -webkit-box-flex: 7;
         -ms-flex-positive: 7;
@@ -373,7 +374,7 @@ table {
         flex-shrink: 5;
     -ms-flex-preferred-size: 58.33%;
         flex-basis: 58.33%; }
-  /* line 65, sass/parts/_framework/_grid.scss */
+  /* line 66, sass/parts/_framework/_grid.scss */
   .col.c8 {
     -webkit-box-flex: 8;
         -ms-flex-positive: 8;
@@ -382,7 +383,7 @@ table {
         flex-shrink: 4;
     -ms-flex-preferred-size: 66.66%;
         flex-basis: 66.66%; }
-  /* line 70, sass/parts/_framework/_grid.scss */
+  /* line 71, sass/parts/_framework/_grid.scss */
   .col.c9 {
     -webkit-box-flex: 9;
         -ms-flex-positive: 9;
@@ -391,7 +392,7 @@ table {
         flex-shrink: 3;
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%; }
-  /* line 75, sass/parts/_framework/_grid.scss */
+  /* line 76, sass/parts/_framework/_grid.scss */
   .col.c10 {
     -webkit-box-flex: 10;
         -ms-flex-positive: 10;
@@ -400,7 +401,7 @@ table {
         flex-shrink: 2;
     -ms-flex-preferred-size: 83.33%;
         flex-basis: 83.33%; }
-  /* line 80, sass/parts/_framework/_grid.scss */
+  /* line 81, sass/parts/_framework/_grid.scss */
   .col.c11 {
     -webkit-box-flex: 11;
         -ms-flex-positive: 11;
@@ -409,7 +410,7 @@ table {
         flex-shrink: 1;
     -ms-flex-preferred-size: 91.66%;
         flex-basis: 91.66%; }
-  /* line 85, sass/parts/_framework/_grid.scss */
+  /* line 86, sass/parts/_framework/_grid.scss */
   .col.c12 {
     -webkit-box-flex: 12;
         -ms-flex-positive: 12;
@@ -420,13 +421,13 @@ table {
         flex-basis: 100%; }
 
 @media only screen and (max-width: 1200px) {
-  /* line 93, sass/parts/_framework/_grid.scss */
+  /* line 94, sass/parts/_framework/_grid.scss */
   .row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
 
 @media only screen and (max-width: 860px) {
-  /* line 99, sass/parts/_framework/_grid.scss */
+  /* line 100, sass/parts/_framework/_grid.scss */
   .row, .col {
     display: block; } }
 
