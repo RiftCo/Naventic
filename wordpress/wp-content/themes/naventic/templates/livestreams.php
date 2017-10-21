@@ -7,6 +7,17 @@ $media = new WP_Query([
 	'post_type'		 => [ 'player' ],
 	'post_status'	 => [ 'publish' ],
 	'posts_per_page' => 6,
+    'meta_query' 	 => [
+        'relation' => 'OR'
+        [
+            'key'   => 'video_description', 
+            'compare' => 'EXISTS'
+        ],
+       	[
+            'key' 	  => 'twitch',
+            'compare' => 'EXISTS'
+        ]
+    ]
 ]);
 
 get_header(); ?>
