@@ -17,7 +17,5 @@
     <link rel="author" href="<?php echo site_url( 'humans.txt' ); ?>">
     <link rel="manifest" href="<?php echo site_url( 'manifest.json' ); ?>">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo get_asset( 'style.css', 'css' ); ?>" media="bogus">
-
     <?php wp_head(); ?>
 </head>
