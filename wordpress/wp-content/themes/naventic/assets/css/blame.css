@@ -1,0 +1,13 @@
+.js-team {
+	display: none;
+}
+
+.js-team.active {
+	display: block;
+}
+
+.current_page_item .nav-item,
+.current-menu-item .nav-item {
+    color: #ac9860 !important;
+    border-bottom-color: #ac9860 !important;
+}

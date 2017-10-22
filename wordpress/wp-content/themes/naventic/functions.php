@@ -192,12 +192,12 @@ class Naventic {
 
 
         /**
-         *  Add customer class to wp_nav li's.
+         *  Add customer class to wp_nav links.
          * 
          *  @since 1.0.1
          */
 
-        add_filter( 'nav_menu_css_class', [ $this, 'custom_menu_classes' ], 10, 3 );
+        add_filter( 'nav_menu_link_attributes', [ $this, 'custom_menu_classes' ], 10, 4 );
 
 
         /**
@@ -284,8 +284,9 @@ class Naventic {
     public function naventic_global_scripts() {
 
         // Load our CSS
-        wp_enqueue_style( 'naventic-inline', get_template_directory_uri() . '/assets/css/inline.css', array(), '1.0.1' );
-        wp_enqueue_style( 'naventic-base', get_template_directory_uri() . '/assets/css/style.css', array( 'naventic-inline' ), '1.0.1' );
+        wp_enqueue_style( 'naventic-inline', get_template_directory_uri() . '/assets/css/inline.css', [], '1.0.1' );
+        wp_enqueue_style( 'naventic-base', get_template_directory_uri() . '/assets/css/style.css', [ 'naventic-inline' ], '1.0.1' );
+        wp_enqueue_style( 'naventic-blame', get_template_directory_uri() . '/assets/css/blame.css', [ 'naventic-base' ], '1.0.1' );
 
         // Load the Internet Explorer specific stylesheet.
         // wp_enqueue_style( 'ie', get_template_directory_uri() . '/assets/css/ie.css' );
@@ -295,7 +296,7 @@ class Naventic {
         wp_deregister_script( 'jquery' );
         wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.1.1.min.js', array(), '3.1.1', true );
         
-        // wp_enqueue_script( 'naventic-bundle', get_template_directory_uri() . '/assets/js/bundle.js', array(), '1.0.1', true );
+        wp_enqueue_script( 'naventic-bundle', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0.1', true );
     }
 
 
@@ -413,24 +414,28 @@ class Naventic {
 
 
     /**
-     *  Add customer class to wp_nav li's.
-     * 
-     *  @param array $classes An array of classes on the list items
-     *  @param mixed $item
-     *  @param array $args Array of additional attributes
-     *  
-     *  @return array Array of classes on the list items
-     * 
-     *  @since 1.0.1
-     *  @access public
+     * Filters the HTML attributes applied to a menu item's anchor element.
+     *
+     * @since 3.6.0
+     * @since 4.1.0 The `$depth` parameter was added.
+     *
+     * @param array $atts {
+     *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
+     *
+     *     @type string $title  Title attribute.
+     *     @type string $target Target attribute.
+     *     @type string $rel    The rel attribute.
+     *     @type string $href   The href attribute.
+     * }
+     * @param WP_Post  $item  The current menu item.
+     * @param stdClass $args  An object of wp_nav_menu() arguments.
+     * @param int      $depth Depth of menu item. Used for padding.
      */
 
-    public function custom_menu_classes( $classes, $item, $args ) {
-        // if( $args->theme_location == 'secondary' ) {
-            $classes[] = 'nav-item';
-        // }
+    public function custom_menu_classes( $atts, $item, $args, $depth ) {
+        $atts['class'] = 'nav-item';
     
-        return $classes;
+        return $atts;
     }
 
 
