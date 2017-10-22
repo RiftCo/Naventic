@@ -240,7 +240,7 @@ footer {
   background-position: center;
   background-size: cover;
   z-index: 0;
-  background-image: url("./img/article/thumbs/thumb-6.jpg");
+  background-image: url("../images/article/thumbs/thumb-6.jpg");
   opacity: .18;
   content: "";
   -webkit-filter: blur(6px);

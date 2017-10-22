@@ -23,6 +23,14 @@
 
     </footer>
 
+    <?php if( $background = theme( 'background_image' ) ) { ?>
+        <style>
+        header::after {
+            background-image: url(<?php echo $background; ?>) !important;
+        }
+        </style>
+    <?php } ?>
+
     <?php echo theme( 'tracking_code' ); ?>
 
     <?php wp_footer(); ?>

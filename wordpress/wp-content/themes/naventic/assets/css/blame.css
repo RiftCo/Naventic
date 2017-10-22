@@ -7,7 +7,14 @@
 }
 
 .current_page_item .nav-item,
-.current-menu-item .nav-item {
+.current-menu-item .nav-item,
+.current-page-ancestor .nav-item {
+    color: #ac9860 !important;
+    border-bottom-color: #ac9860 !important;
+}
+
+.teamPage .menu-item-64,
+.articlePage .menu-item-66 {
     color: #ac9860 !important;
     border-bottom-color: #ac9860 !important;
 }

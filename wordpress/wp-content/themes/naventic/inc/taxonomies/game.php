@@ -51,7 +51,7 @@ class Naventic_Game
 			'rewrite'                    => false,
 		];
 
-		register_taxonomy( 'game', [ 'event', 'product', 'post', 'team', 'video' ], $args );
+		register_taxonomy( 'game', [ 'event', 'player', 'product', 'post', 'team', 'video' ], $args );
 	}
 }
 

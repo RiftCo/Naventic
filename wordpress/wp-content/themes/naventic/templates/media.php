@@ -8,9 +8,9 @@ $media = new WP_Query([
 	'post_status'	 => [ 'publish' ],
 	'posts_per_page' => 6,
     'meta_query' 	 => [
-        'relation' => 'OR'
+        'relation' => 'OR',
         [
-            'key'   => 'video_description', 
+            'key'     => 'video_description', 
             'compare' => 'EXISTS'
         ],
        	[
@@ -22,7 +22,7 @@ $media = new WP_Query([
 
 get_header(); ?>
 
-	<?php partial( 'headers/media', [ 'title' => get_the_title() ]); ?>
+	<?php partial( 'headers/media', [ 'title' => get_the_title(), 'active' => [ 'livestreams', 'videos' ] ]); ?>
 
 	<section>
 		<div class="row">

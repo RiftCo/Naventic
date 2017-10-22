@@ -56,7 +56,7 @@ class Naventic_Player
 			'description'         => __( $this->plural, $this->translation ),
 			'labels'              => $labels,
 			'supports'            => [ 'title', 'thumbnail', 'revisions' ],
-			'taxonomies'          => [ ],
+			'taxonomies'          => [ 'game' ],
 			'hierarchical'        => false,
 			'public'              => true,
 			'show_ui'             => true,

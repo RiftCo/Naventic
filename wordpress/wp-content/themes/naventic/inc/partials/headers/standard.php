@@ -1,4 +1,4 @@
-<body class="<?php body_class( 'storePage' ); ?>">
+<body <?php body_class( 'storePage' ); ?>>
 
 	<header id="top">
 		<?php partial( 'header-nav' ); ?>
