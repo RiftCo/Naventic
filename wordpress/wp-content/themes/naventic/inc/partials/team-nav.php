@@ -13,16 +13,20 @@
 
 	<?php if( $teams = get_posts([ 'post_type' => 'team' ]) ) { ?>
 		<?php foreach( $teams as $i => $team ) { ?>
-			<a href="<?php echo get_the_permalink( $team->ID ); ?>" title="<?php echo esc_attr( get_the_title( $team->ID ) ); ?>" class="js-team js-team--<?php echo $team->ID; ?> <?php if( $team->ID == get_the_ID() || ( is_front_page() && $i == 0 ) ) { echo 'active'; } ?>">
+			<?php if( is_front_page() ) { ?>
+				<a href="<?php echo get_the_permalink( $team->ID ); ?>" title="<?php echo esc_attr( get_the_title( $team->ID ) ); ?>" class="js-team js-team--<?php echo $team->ID; ?> <?php if( is_front_page() && $i == 0 ) { echo 'active'; } ?>">
+			<?php } else { ?>
+				<div class="js-team js-team--<?php echo $team->ID; ?> <?php if( $team->ID == get_the_ID() ) { echo 'active'; } ?>">
+			<?php } ?>
 				<div class="card-container">
 					<div class="details">
 						<h3 class="title"><?php echo get_the_title( $team->ID ); ?></h3>
-						<h6>Meet the team</h6>
+						<h6><?php echo __( 'Meet the team', 'naventic' ); ?></h6>
 					</div>
 				</div>
 
 				<div class="bg-image" style="background-image: url(<?php echo theme( 'background_image', 'url', false, $team->ID ); ?>)"></div>
-			</a>
+			<?php if( is_front_page() ) { ?></a><?php } else { ?></div><?php } ?>
 		<?php } ?>
 	<?php } ?>
 </div>

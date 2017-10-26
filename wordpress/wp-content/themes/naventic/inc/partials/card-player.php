@@ -1,7 +1,5 @@
 <div class="card card-player <?php echo ( theme( 'profile_image_type', false, true, $post->ID ) == 'thumb' ) ? 'noavi' : 'hasAvi'; ?>">
 	<div class="card-container">
-		<?php // var_dump( theme( 'profile_image', false, false, $post->ID ) ); die; ?>
-
 		<div class="avatar-container avi-default">
 			<div class="avatar">
 				<img src="<?php echo get_asset( 'player/default/avatar@2x.jpg' ); ?>" alt="player" width="120" height="120"/>

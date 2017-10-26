@@ -1,4 +1,4 @@
-<body class="articlePage">
+<body class="articlePage <?php echo ( get_post_type() == 'post' ) ? 'newsArticlePage' : ''; ?>">
 
 	<header id="top">
 		<?php partial( 'header-nav' ); ?>

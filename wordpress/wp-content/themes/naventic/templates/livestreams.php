@@ -10,7 +10,7 @@ $media = new WP_Query([
     'meta_query' 	 => [
         'relation' => 'OR',
         [
-            'key'   => 'video_description', 
+            'key'     => 'video_description', 
             'compare' => 'EXISTS'
         ],
        	[
