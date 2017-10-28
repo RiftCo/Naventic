@@ -240,7 +240,7 @@ gulps.registerTasks({
 						twitter_username: 'TheOllieJT',
 
 						// URL
-						siteUrl: ''
+						siteUrl: 'https://riftco.github.io/Naventic/public/'
 					},
 					//base: path.markup.src,
 					//getIncludeId: function (filePath) {
