@@ -242,10 +242,10 @@ gulps.registerTasks({
 						// URL
 						siteUrl: ''
 					},
-					//base: path.markup.src,
-					//getIncludeId: function (filePath) {
-					//	return path.relative(path.markup.src, filePath);
-					//}
+					base: path.markup.src,
+					getIncludeId: function (filePath) {
+						return path.relative(path.markup.src, filePath);
+					}
 				}))
 
 
