@@ -3,6 +3,25 @@
     "title": "Video Details",
     "fields": [
         {
+            "key": "field_59f5a5fcc33ee",
+            "label": "Video URL",
+            "name": "video_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59ea4f978d962",
             "label": "Video Description",
             "name": "video_description",
@@ -18,8 +37,8 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
+            "rows": 2,
+            "new_lines": ""
         }
     ],
     "location": [
@@ -39,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1508528106
+    "modified": 1509271209
 }

@@ -29,7 +29,11 @@ get_header(); ?>
 			<?php if ( $media->have_posts() ) { ?>
 				<?php while ( $media->have_posts() ) { $media->the_post(); ?>
 					<div class="col c4">
-						<?php partial( 'card-stream', [ 'post' => get_post() ] ); ?>
+						<?php if( get_post_type() == 'video' ) { ?>
+							<?php partial( 'card-video', [ 'post' => get_post() ] ); ?>
+						<?php } else { ?>
+							<?php partial( 'card-stream', [ 'post' => get_post() ] ); ?>
+						<?php } ?>
 					</div>
 				<?php } ?>
 			<?php } ?>

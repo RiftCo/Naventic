@@ -7,8 +7,8 @@
     // Create our news page subtitle
     $title = 'Naventic News';
 
-    if( isset( $_GET['filter'] ) ) {
-      $game = get_term_by( 'slug', $_GET['filter'], 'game' );
+    if( isset( $_GET['game'] ) ) {
+      $game = get_term_by( 'slug', $_GET['game'], 'game' );
 
       if( $game ) {
         $title = 'Naventic <span>' . $game->name . '</span> News';
@@ -23,10 +23,10 @@
       </div>
     </div>
 
-    <ul class="newsFilter newsFilterType row" style="display: none">
-      <li><a href="." class="active"><p>Event</p></a></li>
-      <li><a href="." class="active"><p>Video</p></a></li>
-      <li><a href="."><p>League</p></a></li>
+    <ul class="newsFilter newsFilterType row">
+      <li><a href="<?php echo filter_link( 'filter', 'post' ); ?>" title="News" class="<?php echo filter_link_class( 'filter', 'post' ); ?>"><p>News</p></a></li>
+      <li><a href="<?php echo filter_link( 'filter', 'event' ); ?>" title="Events" class="<?php echo filter_link_class( 'filter', 'event' ); ?>"><p>Events</p></a></li>
+      <li><a href="<?php echo filter_link( 'filter', 'video' ); ?>" title="Videos" class="<?php echo filter_link_class( 'filter', 'video' ); ?>"><p>Videos</p></a></li>
     </ul>
 
     <?php if( $teams = get_posts([ 'post_type' => 'team' ]) ) { ?>
@@ -40,13 +40,13 @@
           $game_taxonomy = $game_taxonomy[0];
 
           // Set a variable for if our game filter is active
-          $game_is_active = !! ( isset( $_GET['filter'] ) && $_GET['filter'] == $game_taxonomy->slug );
+          $game_is_active = filter_link_class( 'game', $game_taxonomy->slug );
 
           // Set our link
-          $game_link = ( $game_is_active ) ? '?' : '?filter=' . $game_taxonomy->slug;
+          $game_link = filter_link( 'game', $game_taxonomy->slug, true );
           ?>
           <li>
-            <a href="<?php echo $game_link; ?>" title="<?php echo esc_attr( get_the_title( $team->ID ) ); ?>" <?php if( $game_is_active ) { echo 'class="active"'; } ?>>
+            <a href="<?php echo $game_link; ?>" title="<?php echo esc_attr( get_the_title( $team->ID ) ); ?>" class="<?php echo $game_is_active; ?>">
               <img src="<?php echo theme( 'team_icon', 'url', false, $team->ID ); ?>" alt="<?php echo esc_attr( get_the_title( $team->ID ) ); ?>" height="30" />
             </a>
           </li>

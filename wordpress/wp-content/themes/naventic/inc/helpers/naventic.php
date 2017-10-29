@@ -277,3 +277,56 @@ function twitch_api() {
         'api_version' => 5,
     ]);
 }
+
+// Set up filter links
+function filter_link( $key, $value, $single = false ) {
+    // Prefill our filter if none are set
+    if( ! isset( $_GET['filter'] ) ) {
+        $_GET['filter'] = [ 'post', 'event', 'video' ];
+    }
+
+    // Cache our $_GET values so that we aren't updating the global
+    $get = $_GET;
+
+    // Check if our field is currently active
+    $current = filter_link_class($key, $value);
+
+    if( $current && ! $single ) {
+        foreach( $get[$key] as $i => $filter ) {
+            if( $filter == $value ) {
+                unset( $get[$key][$i] );
+            }
+        }
+    } else {
+        if( $single ) {
+            $get[$key] = $value;
+        } else {
+            $get[$key][] = $value;
+        }
+    }
+
+    // Build our query
+    return '?' . urldecode(http_build_query($get));
+}
+
+function filter_link_class( $key, $value ) {
+    // Our active class
+    $active_class = 'active';
+
+    // Check if our GET variable is set
+    if( ! isset( $_GET[$key] ) ) {
+        return '';
+    }
+
+    // If the filter is an array, check the values
+    if( is_array( $_GET[$key] ) && ! in_array( $value, $_GET[$key] ) ) {
+        return '';
+    }
+
+    // If the filter is a string, check the value
+    if( ! is_array( $_GET[$key] ) && $_GET[$key] != $value ) {
+        return '';
+    }
+
+    return $active_class;
+}

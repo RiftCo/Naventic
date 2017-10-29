@@ -452,17 +452,24 @@ class Naventic {
 
     public function naventic_add_custom_types( $query ) {
         if( ( is_home() || is_category() || is_tag() ) && $query->is_main_query() && empty( $query->query_vars['suppress_filters'] ) ) {
-            $query->set( 'post_type', [
-                'post', 'event', 'video'
-            ]);
-
+            // Filter our results by post type
             if( isset( $_GET['filter'] ) ) {
+                // If we have a filter set then show those specific post types only
+                $query->set( 'post_type', (array) $_GET['filter'] );
+            } else {
+                // If we don't have any filters set then show all post types
+                $query->set( 'post_type', [ 'post', 'event', 'video' ]);
+            }
+
+            // Check if we are filtering by game
+            if( isset( $_GET['game'] ) ) {
                 $query->set( 'tax_query', [
                     'relation' => 'AND',
                     [
                         'taxonomy' => 'game',
                         'field'    => 'slug',
-                        'terms'    => $_GET['filter'],
+                        'terms'    => $_GET['game'],
+                        'compare'  => 'IN',
                     ]
                 ]);
             }

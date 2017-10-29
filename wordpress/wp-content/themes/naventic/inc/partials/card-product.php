@@ -1,12 +1,19 @@
-<a class="card card-store" href="." rel="prefetch" target="_self">
+<a class="card card-store" href="<?php echo theme( 'external_link', false, false, $post->ID ); ?>" rel="prefetch" target="_blank">
 	<div class="card-container">
 		<div class="thumb product-photo">
-			<!--<div class="price sale"><h6>$44.99</h6></div>-->
-			<img src="<?php echo get_asset('store/default/photo@2x.png' ); ?>" alt="player" width="294" height="360" />
+			<!--<div class="price sale"><h6><?php echo theme( 'price', false, false, $post->ID ); ?></h6></div>-->
+			<?php if ( has_post_thumbnail($post->ID) ) { ?>
+				<img src="<?php echo get_the_post_thumbnail_url( $post->ID ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" width="294" height="360" />
+			<?php } else { ?>
+				<img src="<?php echo get_asset('store/default/photo@2x.png' ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" width="294" height="360" />
+			<?php } ?>
 		</div>
 		<div class="details">
-			<h5>Main Jersey</h5>
-			<h6>Official Team Jersey</h6>
+			<h5><?php echo get_the_title(); ?></h5>
+
+			<?php if( $subtitle = theme( 'subtitle', false, false, $post->ID ) ) { ?>
+				<h6><?php echo $subtitle; ?></h6>
+			<?php } ?>
 		</div>
 	</div>
 </a>
