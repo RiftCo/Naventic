@@ -284,8 +284,7 @@ class Naventic {
     public function naventic_global_scripts() {
 
         // Load our CSS
-        wp_enqueue_style( 'naventic-inline', get_template_directory_uri() . '/assets/css/inline.css', [], '1.0.1' );
-        wp_enqueue_style( 'naventic-base', get_template_directory_uri() . '/assets/css/style.css', [ 'naventic-inline' ], '1.0.1' );
+        wp_enqueue_style( 'naventic-base', get_template_directory_uri() . '/assets/css/style.css', [], '1.0.2' );
         wp_enqueue_style( 'naventic-blame', get_template_directory_uri() . '/assets/css/blame.css', [ 'naventic-base' ], '1.0.1' );
 
         // Load the Internet Explorer specific stylesheet.
