@@ -28,7 +28,7 @@ $teams = get_posts([ 'post_type' => 'team', 'posts_per_page' => -1 ]);
 					echo '<div class="col c6">';
 				}
 
-				partial( 'card-news', [ 'post' => get_post( $team->ID ) ] );
+				partial( 'card-team', [ 'post' => get_post( $team->ID ) ] );
 
 				echo '</div>';
 
