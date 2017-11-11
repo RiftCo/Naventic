@@ -6,7 +6,7 @@
 	</div>
 
 	<?php if ( has_post_thumbnail($post->ID) ) { ?>
-		<div class="bg-image" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID ); ?>)"> <span class="overlay hover"></span> </div>
+		<div class="bg-image" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)"> <span class="overlay hover"></span> </div>
 	<?php } else { ?>
 		<div class="bg-image" style="background-image: url(<?php echo get_asset( 'article/thumbs/thumb-3.jpg' ); ?>)"> <span class="overlay hover"></span> </div>
 	<?php } ?>

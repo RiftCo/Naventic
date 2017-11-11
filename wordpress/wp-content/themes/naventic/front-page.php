@@ -27,7 +27,6 @@
 			</div>
 		<?php } ?>
 
-
 		<!-- Player Cards -->
 		<?php if( $players ) { ?>
 			<div class="row">
@@ -39,7 +38,6 @@
 			</div>
 		<?php } ?>
 
-
 		<!-- Livestream Cards -->
 		<?php if( $streams ) { ?>
 			<div class="row">
@@ -50,7 +48,6 @@
 				<?php } ?>
 			</div>
 		<?php } ?>
-
 
 		<!-- Store Cards -->
 		<?php if( $posts = get_posts([ 'posts_per_page' => 3, 'post_type' => 'product' ]) ) { ?>

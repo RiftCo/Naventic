@@ -1,4 +1,4 @@
-<body class="teamPage">
+<body <?php body_class( 'teamPage' ); ?>>
 
 	<header id="top">
 		<?php partial( 'header-nav' ); ?>

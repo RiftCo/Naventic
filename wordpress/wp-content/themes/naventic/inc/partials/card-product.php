@@ -3,7 +3,7 @@
 		<div class="thumb product-photo">
 			<!--<div class="price sale"><h6><?php echo theme( 'price', false, false, $post->ID ); ?></h6></div>-->
 			<?php if ( has_post_thumbnail($post->ID) ) { ?>
-				<img src="<?php echo get_the_post_thumbnail_url( $post->ID ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" width="294" height="360" />
+				<img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" width="294" height="360" />
 			<?php } else { ?>
 				<img src="<?php echo get_asset('store/default/photo@2x.png' ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" width="294" height="360" />
 			<?php } ?>

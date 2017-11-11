@@ -1,4 +1,4 @@
-<body class="newsPage">
+<body <?php body_class( 'newsPage' ); ?>>
 
   <header id="top">
     <?php partial( 'header-nav' ); ?>

@@ -1,15 +1,15 @@
-<div class="card card-player <?php echo ( theme( 'profile_image_type', false, true, $post->ID ) == 'thumb' ) ? 'noavi' : 'hasAvi'; ?>">
+<div class="card card-player <?php echo ( theme( 'profile_image_type', false, true, $post->ID ) == 'thumb' ) ? 'noAvi' : 'hasAvi'; ?>">
 	<div class="card-container">
 		<div class="avatar-container avi-default">
 			<div class="avatar">
-				<img src="<?php echo get_asset( 'player/default/avatar@2x.jpg' ); ?>" alt="player" width="120" height="120"/>
+				<img src="<?php echo theme( 'profile_image', 'url', get_asset( 'player/default/avatar@2x.jpg' ), $post->ID ); ?>" alt="<?php echo esc_attr( get_the_title( $post->ID ) ); ?>" width="120" height="120"/>
 			</div>
 
 			<div class="bg-image" style="background-image: url('<?php echo get_asset( 'article/thumbs/thumb-3.jpg' ); ?>')"></div>
 		</div>
 
 		<div class="avatar-container avi-photo">
-			<img src="<?php echo get_asset( 'player/default/photo@2x.png' ); ?>" alt="<?php echo esc_attr( get_the_title( $post->ID ) ); ?>" width="294" height="530" />
+			<img src="<?php echo theme( 'profile_image', 'url', get_asset( 'player/default/photo@2x.png' ), $post->ID ); ?>" alt="<?php echo esc_attr( get_the_title( $post->ID ) ); ?>" width="294" height="530" />
 		</div>
 
 		<div class="details">

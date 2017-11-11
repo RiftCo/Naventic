@@ -1,4 +1,4 @@
-<body class="articlePage <?php echo ( get_post_type() == 'post' ) ? 'newsArticlePage' : ''; ?>">
+<body <?php body_class( ( get_post_type() == 'post' ) ? 'newsArticlePage articlePage' : 'articlePage' ); ?>>
 
 	<header id="top">
 		<?php partial( 'header-nav' ); ?>
@@ -7,14 +7,9 @@
 			<div class="title">
 				<h6>
 					<span>
-						<?php if($game_tags = wp_get_post_terms( get_the_ID(), 'game' ) ) { ?>
-							<?php foreach($game_tags as $tag) { ?>
-								<?php echo $tag->name; ?>
-							<?php } ?>
-						<?php } ?>
+						<?php echo news_game_label( get_the_ID(), false ); ?>
 						
-						<?php echo ucwords( get_post_type() ); ?>
-
+						<?php echo news_category_label( get_the_ID() ); ?>
 					</span> 
 
 					<?php echo timeago( get_post_time( 'U', true ) ); ?>

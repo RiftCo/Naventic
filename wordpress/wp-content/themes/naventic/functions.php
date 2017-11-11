@@ -472,6 +472,11 @@ class Naventic {
                     ]
                 ]);
             }
+
+            // If we're on the homepage, limit to 5 results
+            if( is_home() ) {
+                $query->set( 'posts_per_page', 7 );
+            }
             
             return $query;
         }

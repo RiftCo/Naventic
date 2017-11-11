@@ -1349,27 +1349,6 @@ footer {
   .card-page-team h6 {
     color: #ac9860; }
 
-/* line 10, sass/parts/elements/_DEMO.scss */
-.demo .row {
-  margin-top: 15rem;
-  margin-bottom: 15rem; }
-
-/* line 16, sass/parts/elements/_DEMO.scss */
-.demo .col:nth-child(odd) .card-player .avi-default {
-  display: none !important; }
-
-/* line 19, sass/parts/elements/_DEMO.scss */
-.demo .col:nth-child(odd) .card-livestream .live {
-  display: none; }
-
-/* line 24, sass/parts/elements/_DEMO.scss */
-.demo .col:nth-child(even) .card-player .avi-photo {
-  display: none !important; }
-
-/* line 27, sass/parts/elements/_DEMO.scss */
-.demo .col:nth-child(even) .card-livestream .offline {
-  display: none; }
-
 /* line 10, sass/parts/pages/_home.scss */
 .homepageHeader {
   width: 100%;

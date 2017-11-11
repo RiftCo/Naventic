@@ -7,7 +7,7 @@
 		<section class="row articleBody">
 			<article class="col c8">
 				<?php if ( has_post_thumbnail() ) { ?>
-    				<?php the_post_thumbnail(); ?>
+					<?php echo '<img src="' . get_the_post_thumbnail_url( get_the_ID(), 'full' ) . '" alt="' . esc_attr( get_the_title() ) . '" width="606" />'; ?>
 				<?php } ?> 
 		
 				<?php the_content(); ?>

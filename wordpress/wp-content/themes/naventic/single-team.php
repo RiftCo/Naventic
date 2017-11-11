@@ -10,7 +10,7 @@
 	$game_taxonomy = $game_taxonomy[0];
 	?>
 
-	<?php if( $team_news = get_posts([ 'post_type' => 'post', 'tax_query' => [['taxonomy' => 'game', 'field' => 'slug', 'terms' => $game_taxonomy]] ]) ) { ?>
+	<?php if( $team_news = get_posts([ 'post_type' => 'post', 'posts_per_page' => 4, 'tax_query' => [['taxonomy' => 'game', 'field' => 'slug', 'terms' => $game_taxonomy]] ]) ) { ?>
 		<section class="wideNews">
 			<?php foreach( $team_news as $post ) { ?>
 				<div class="col c3">

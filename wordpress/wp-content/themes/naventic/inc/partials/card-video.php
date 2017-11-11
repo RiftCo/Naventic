@@ -2,7 +2,7 @@
 	<div class="card-container">
 		<div class="thumb">
 			<?php if ( has_post_thumbnail($post->ID) ) { ?>
-				<div class="bg-image" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID ); ?>)"></div>
+				<div class="bg-image" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>)"></div>
 			<?php } else { ?>
 				<div class="bg-image" style="background-image: url(<?php echo get_asset( 'article/thumbs/thumb-3.jpg' ); ?>)"></div>
 			<?php } ?>

@@ -16,7 +16,7 @@ if ( $sponsors->have_posts() ) {
 
 		if ( has_post_thumbnail() ) {
 			echo '<a href="' . get_post_meta( get_the_ID(), 'website_url', true ) . '" title="' . esc_attr( get_the_title() ) . '" target="_blank">';
-				echo '<img src="' . get_the_post_thumbnail_url() . '" alt="' . esc_attr( get_the_title() ) . '" height="30" />';
+				echo '<img src="' . get_the_post_thumbnail_url( get_the_ID(), 'full' ) . '" alt="' . esc_attr( get_the_title() ) . '" height="30" />';
 			echo '</a>';
 		}
 	}

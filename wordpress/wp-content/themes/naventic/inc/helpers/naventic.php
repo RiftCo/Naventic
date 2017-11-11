@@ -330,3 +330,23 @@ function filter_link_class( $key, $value ) {
 
     return $active_class;
 }
+
+function news_category_label( $post_id ) {
+    return ucwords( get_post_type( $post_id ) );
+}
+
+function news_game_label( $post_id, $legacy = false ) {
+    if( $game_tags = wp_get_post_terms( $post_id, 'game' ) ) {
+        if( $legacy ) {
+            return $game_tags[0]->name;
+        }
+
+        foreach( $game_tags as $tag ) {
+            if( get_post_meta( $post_id, '_yoast_wpseo_primary_game', true ) == $tag->term_id ) {
+                return $tag->name;
+            }
+        }
+    }
+
+    return '';
+}

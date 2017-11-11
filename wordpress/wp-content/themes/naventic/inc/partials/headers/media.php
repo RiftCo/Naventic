@@ -1,4 +1,4 @@
-<body class="mediaPage">
+<body <?php body_class( 'mediaPage' ); ?>>
 
 	<header id="top">
 		<?php partial( 'header-nav' ); ?>

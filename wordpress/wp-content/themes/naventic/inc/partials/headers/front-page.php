@@ -1,4 +1,4 @@
-<body class="homePage">
+<body <?php body_class( 'homePage' ); ?>>
 	
 	<header id="top">
 		<?php partial( 'header-nav' ); ?>
