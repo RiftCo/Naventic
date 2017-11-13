@@ -42,10 +42,10 @@
         },
         {
             "key": "field_59f5a75720514",
-            "label": "External Link",
-            "name": "external_link",
-            "type": "text",
-            "instructions": "",
+            "label": "Shopify Buy Button",
+            "name": "shopify_buy_button",
+            "type": "textarea",
+            "instructions": "Generate the HTML code from Shopify and paste it into this box",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -55,9 +55,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -77,5 +77,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1509271396
+    "modified": 1510607461
 }

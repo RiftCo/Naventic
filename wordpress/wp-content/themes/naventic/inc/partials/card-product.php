@@ -14,6 +14,8 @@
 			<?php if( $subtitle = theme( 'subtitle', false, false, $post->ID ) ) { ?>
 				<h6><?php echo $subtitle; ?></h6>
 			<?php } ?>
+
+			<?php echo theme( 'shopify_buy_button', false, '', $post->ID ); ?>
 		</div>
 	</div>
 </a>
